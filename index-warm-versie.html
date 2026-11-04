@@ -1,0 +1,162 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Operation Brugge – Sj.B.A.M.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;500;700&family=Archivo:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2a1d14;--cream:#f7efe3;--paper:#fffaf2;--amber:#c8862a;--amber2:#e7b45a;--canal:#2f5d62;--canal2:#5e8b8f;--brick:#9c4a2f;--muted:#7a6a5c;--r:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px}
+header{min-height:340px;max-height:420px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:32px max(24px,calc((100% - 1040px)/2)) 36px;color:#fff;background:linear-gradient(180deg,rgba(20,30,32,.15) 0%,rgba(20,30,32,.35) 45%,rgba(42,29,20,.92) 100%),url("https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Rozenhoedkaai_%28canal%29_and_Belfry_of_Bruges%2C_Bruges%2C_Belgium_%28Ank_Kumar%2C_Infosys_Limited%29_05.jpg/1280px-Rozenhoedkaai_%28canal%29_and_Belfry_of_Bruges%2C_Bruges%2C_Belgium_%28Ank_Kumar%2C_Infosys_Limited%29_05.jpg") center 40%/cover}
+header h1{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.02;margin:0;letter-spacing:-.5px;text-shadow:0 4px 24px rgba(0,0,0,.4)}
+header p{margin:10px 0 0;font-size:1.1rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber2);font-weight:700}
+#cd{margin-top:22px;padding:10px 18px;border-radius:999px;background:rgba(255,250,242,.14);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);font-weight:600;font-variant-numeric:tabular-nums}
+.wrap{max-width:1040px;margin:auto;padding:24px 24px 40px}
+h2{font-family:"Playfair Display",serif;font-size:clamp(1.7rem,3.5vw,2.3rem);color:var(--canal);margin:72px 0 8px;display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--amber2),transparent);margin-left:8px}
+.wrap>h2:first-child{margin-top:48px}
+.wrap>p{color:var(--muted);max-width:640px;margin:0 0 20px}
+a{color:var(--brick);font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}
+.tl,.near{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:20px}
+.near{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 2px rgba(42,29,20,.06),0 8px 24px rgba(42,29,20,.08);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 2px 4px rgba(42,29,20,.08),0 20px 40px rgba(42,29,20,.18)}
+.card .ph{height:170px;background-size:cover;background-position:center;position:relative}
+.card .ic{position:absolute;bottom:-26px;left:18px;width:56px;height:56px;border-radius:50%;background:var(--amber);border:4px solid var(--paper);display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 6px 14px rgba(0,0,0,.2);z-index:2;transition:transform .35s}
+.card:hover .ic{transform:rotate(-8deg) scale(1.08)}
+.card .bd{padding:38px 20px 22px}
+.near .card .ph{height:130px}.near .card .bd{padding:34px 18px 18px;font-size:.95rem;color:#4a3a2e}
+.near .card .bd b{color:var(--ink);font-size:1.02rem}
+.tl .bd>div:first-child{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.card .tm{font-family:"Playfair Display",serif;font-size:2.4rem;font-weight:800;color:var(--canal);line-height:1.1;margin:2px 0 6px}
+.card ul{list-style:none;padding:12px 0 0;margin:14px 0 0;border-top:1px dashed #e4d6c3}
+.card li{margin:6px 0;font-size:.95rem;color:#4a3a2e}
+.fixed{display:inline-block;margin-left:6px;background:var(--canal);color:#fff;padding:2px 9px;border-radius:999px;font-size:.68rem;font-weight:700;letter-spacing:.08em;vertical-align:middle}
+.band{height:260px;background-size:cover;background-position:center;border-radius:var(--r);margin:40px 0 0}
+form{background:var(--paper);border-radius:var(--r);padding:24px;box-shadow:0 8px 24px rgba(42,29,20,.08);margin-top:20px}
+form>label:first-child{display:block;font-weight:600;margin-bottom:14px}
+select,textarea{width:100%;font:inherit;padding:12px 14px;border:1.5px solid #e4d6c3;border-radius:12px;background:#fff;margin-top:6px;transition:border-color .2s,box-shadow .2s}
+select:focus,textarea:focus{outline:none;border-color:var(--canal2);box-shadow:0 0 0 4px rgba(94,139,143,.18)}
+label.opt{display:block;position:relative;background:#fff;border:1.5px solid #ecdfcc;border-radius:14px;padding:16px 16px 16px 48px;margin:12px 0;cursor:pointer;transition:all .25s;color:#4a3a2e;font-size:.95rem}
+label.opt b{color:var(--ink)}
+label.opt:hover{border-color:var(--amber2);transform:translateX(3px)}
+label.opt input{position:absolute;left:16px;top:19px;accent-color:var(--canal);width:18px;height:18px}
+label.opt:has(input:checked){border-color:var(--canal);background:#f1f6f5;box-shadow:0 0 0 3px rgba(47,93,98,.12)}
+button{margin-top:14px;background:var(--canal);color:#fff;border:0;padding:14px 28px;border-radius:999px;font:700 1rem Inter,sans-serif;cursor:pointer;transition:transform .2s,background .2s;box-shadow:0 6px 16px rgba(47,93,98,.3)}
+button:hover{background:var(--brick);transform:translateY(-2px)}
+#sum{margin-top:18px;background:var(--paper);border-left:4px solid var(--amber);border-radius:12px;padding:6px 20px}
+#sum h3{font-family:"Playfair Display",serif;color:var(--canal);margin:12px 0 4px}
+.credit{font-size:.78rem;color:var(--muted);text-align:center;padding:40px 20px 50px;border-top:1px solid #e4d6c3;margin-top:60px}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.card.rv.in:hover{transform:translateY(-6px)}
+
+.tl{gap:16px;margin-top:16px;align-items:stretch}
+.tl .card{display:flex;flex-direction:column;border:1px solid #eadfce;box-shadow:0 1px 2px rgba(42,29,20,.05);border-radius:20px}
+.tl .card:hover{box-shadow:0 14px 34px rgba(42,29,20,.14)}
+.tl .card .ph{height:140px}
+.tl .card .bd{flex:1;display:flex;flex-direction:column;padding:32px 18px 16px}
+.tl .card .tm{font-family:Inter,sans-serif;font-weight:700;font-size:2rem;letter-spacing:-1px;color:var(--ink);margin:0}
+.tl .card .bd>b{font-size:1.05rem}
+.tl .card ul{margin-top:10px;padding-top:10px;flex:1}
+.tl .card li{margin:3px 0;font-size:.9rem}
+.wrap>h2:first-child{margin-top:28px}
+h2{margin-top:52px}
+
+.fixed.ok{background:#2e7d4f}.fixed.ok::before{content:"";}
+.fixed.q{background:var(--amber);animation:qWob 1.6s ease-in-out infinite}
+.tl{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.tl .card .ic{transition:transform .35s}.tl .card:hover{transform:translateY(-6px) rotate(-.6deg)}
+.tl .card:nth-child(even):hover{transform:translateY(-6px) rotate(.6deg)}
+.qcard{border:2px dashed var(--amber)!important;background:#fff8ec}
+.qph{background:repeating-linear-gradient(45deg,#f3d9a8,#f3d9a8 14px,#f7e5c2 14px,#f7e5c2 28px)}
+.qbig{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 5rem "Playfair Display",serif;color:var(--brick);animation:qWob 1.6s ease-in-out infinite}
+.chips{display:flex;flex-wrap:wrap;gap:6px;border-top:1px dashed #e4d6c3}
+.chips li{margin:0!important}
+.chips a{display:inline-block;border:1.5px solid var(--amber);border-radius:999px;padding:4px 10px;font-size:.82rem;color:var(--ink);background:#fff;transition:all .2s}
+.chips a:hover{background:var(--amber);color:#fff;transform:scale(1.05)}
+@keyframes qWob{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+
+.tl .card li{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:.92rem;letter-spacing:-.1px;color:var(--ink)}
+.tl .card .bd>b{font-family:Archivo,Inter,sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:-.2px}
+.pollq{margin-top:10px!important;color:var(--brick)!important;text-transform:uppercase;letter-spacing:.06em!important;font-size:.8rem!important}
+.poll{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pv{margin:0;padding:10px 6px;border-radius:14px;background:#fff;color:var(--ink);border:2px solid #ecdfcc;box-shadow:none;display:flex;flex-direction:column;align-items:center;gap:2px;font-family:Archivo,Inter,sans-serif;position:relative;overflow:hidden}
+.pv span{font-size:1.5rem;transition:transform .3s}.pv b{font-weight:900;font-size:.9rem}.pv small{font:500 .7rem Inter,sans-serif;color:var(--muted)}
+.pv em{font-style:normal;font-weight:900;font-size:1.1rem;color:var(--canal)}
+.pv:hover{background:#fff8ec;border-color:var(--amber);transform:translateY(-2px)}.pv:hover span{transform:scale(1.25) rotate(-10deg)}
+.pv.mine{border-color:var(--canal);background:#eef5f4}.pv.mine::after{content:"\2713";position:absolute;top:4px;right:8px;color:var(--canal);font-weight:900}
+
+body{background:#e9e3da}
+:root{--paper:#f4efe7;--cream:#e9e3da}
+.card,form,label.opt,select,textarea,#sum{background-color:#f4efe7}
+label.opt{background:#f6f1ea}
+.qcard{border:1.5px solid #e2c48f!important;background:#f6eedf!important}
+.qph{background:linear-gradient(135deg,#efdcb8,#f3e6cc)!important}
+.qbig{animation:none!important;font-size:3.6rem!important;color:#b07a3a!important;opacity:.85}
+.fixed.q{animation:none!important;background:#c8862a}
+.qcard:hover{transform:translateY(-4px)!important}
+
+.ico{width:1.1em;height:1.1em;vertical-align:-.18em;flex:none}
+li .ico,.fixed .ico,.chips .ico,h2 .ico{margin-right:.35em}
+.card .ic .ico{width:28px;height:28px;color:#fff;margin:0}
+.sw-beer .ico{width:34px;height:34px;color:var(--amber)}
+.pv span .ico{width:26px;height:26px;color:var(--canal)}
+h2 .ico{width:1em;height:1em;color:var(--amber)}
+.near .card .bd>.ico,.near .bd div .ico{width:30px;height:30px;color:var(--canal)}
+#swRs .ico{margin:0;width:16px;height:16px;vertical-align:-3px}
+.fixed .ico{width:.95em;height:.95em;margin-right:.2em;stroke-width:3}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1;transform:none}}
+
+.sw{display:flex;align-items:center;gap:16px;margin-top:12px;padding:12px 16px;border-radius:16px;background:linear-gradient(135deg,#2a1d14,#4a2e18);color:#fff;box-shadow:0 8px 20px rgba(200,134,42,.35);}.sw.run{animation:swPulse 1.2s ease-in-out infinite}
+.sw-dial{position:relative;width:74px;height:74px;flex:none}
+.sw-dial::before{content:"";position:absolute;top:-8px;left:50%;width:14px;height:10px;margin-left:-7px;background:var(--amber2);border-radius:4px 4px 0 0}
+.sw-dial svg{width:100%;height:100%;transform:rotate(-90deg)}
+.sw-bg{fill:#fffaf2;stroke:#5a3d24;stroke-width:8}
+.sw-arc{fill:none;stroke:var(--amber2);stroke-width:8;stroke-linecap:round;stroke-dasharray:276;stroke-dashoffset:276}
+.sw-beer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30px;animation:swWob 1.2s ease-in-out infinite}
+.sw-hand{position:absolute;left:50%;top:10px;width:3px;height:28px;margin-left:-1.5px;background:var(--brick);border-radius:2px;transform-origin:50% 100%}
+.sw-t{font-family:"Playfair Display",serif;font-weight:800;font-size:1.4rem;color:var(--amber2);letter-spacing:.04em}
+.sw-c{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.15rem}
+.sw-b{display:flex;gap:8px;margin:6px 0}.sw-b button{margin:0;padding:6px 14px;font-size:.85rem;background:var(--amber);box-shadow:none}.sw-b button:hover{background:var(--amber2);color:var(--ink)}.sw-c{font-size:1.6rem!important;font-family:ui-monospace,Menlo,monospace}
+.sw-s{font-size:.78rem;opacity:.75}
+@keyframes swSpin{to{transform:rotate(360deg)}}
+@keyframes swFill{to{stroke-dashoffset:0}}
+@keyframes swWob{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg) scale(1.1)}}
+@keyframes swPulse{0%,100%{box-shadow:0 8px 20px rgba(200,134,42,.3)}50%{box-shadow:0 8px 32px rgba(231,180,90,.7)}}
+</style></head><body>
+<header><h1><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg> Operation Brugge</h1><p>Sj.B.A.M. · 20–22 november 2026</p><div id="cd"></div></header>
+<div class="wrap">
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Planning</h2><div class="tl">
+<div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Sint-Janshuismolen-20140322-RM-154925.jpg/1280px-Sint-Janshuismolen-20140322-RM-154925.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l2 3h14l2-3z"/><path d="M5 17V12h14v5"/><path d="M8 12V8h6v4"/><path d="M11 8V4"/></svg></div></div><div class="bd"><div>Vrijdag 20 nov</div><div class="tm">15:00</div><b>Inchecken MS Rio Claro</b> <span class="fixed ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> geboekt</span><ul><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v2H3z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/><path d="M5 11h14"/></svg> ~12:00 vertrek Leek (~4u50)</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg> Kruisvest 11, naast de molens</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a8 5 0 0 1 16 0z"/><path d="M3 13h18"/><path d="M4 16h16a0 0 0 0 1 0 0 2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg> Avond: Jilles of Cambrinus</li><li class="pollq"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg> Afzakken: stem!</li><li class="poll"><button type="button" class="pv" data-v="garre"><span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l2 1V6h2v3h2V6h4v3h2V6h2v3l2-1v13z"/><path d="M10 21v-5a2 2 0 0 1 4 0v5"/></svg></span><b>De Garre</b><small>huistripel, steegje</small><em id="pv-garre">0</em></button><button type="button" class="pv" data-v="beertje"><span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="13" r="7"/><circle cx="12" cy="15" r="2"/><path d="M9.5 11h.01M14.5 11h.01"/></svg></span><b>Brugs Beertje</b><small>300 bieren, laat open</small><em id="pv-beertje">0</em></button></li></ul></div></div>
+<div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Brugge%2C_de_Belfort-Hal_of_Halletoren_%28oeg29457%29_op_de_Markt_2e_poging_foto4_2015-09-27_19.26.jpg/1280px-Brugge%2C_de_Belfort-Hal_of_Halletoren_%28oeg29457%29_op_de_Markt_2e_poging_foto4_2015-09-27_19.26.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6l-1 9a2 2 0 0 1-4 0z"/><path d="M14 4h6l-1 9a2 2 0 0 1-4 0z"/><path d="M7 15v5M17 15v5M5 20h4M15 20h4"/></svg></div></div><div class="bd"><div>Zaterdag 21 nov</div><div class="tm">14:00</div><b>Proeverij Fort Lapin</b> <span class="fixed ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> bevestigd</span><ul><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M11 21l2-7 3 3v4M13 14l-1-5-3 2-1 4M12 9l4 2 2-1"/></svg> Ochtend: tour of fietsrondje</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-6 9 6z"/><path d="M3 14h18M4 17h16v2H4z"/></svg> ~12:00 lunch</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg> Dreef ter Panne 2 · €16 pp · ~15 min lopen</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg> Avond: Cactus of Dark Side-tour</li></ul></div></div>
+<div class="card qcard"><div class="ph qph"><span class="qbig">?</span><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.7"/><path d="M12 17h.01"/></svg></div></div><div class="bd"><div>Zaterdag 21 nov · nog open</div><div class="tm">Tour?</div><b>Geef je keuze door</b> <span class="fixed q">? open</span><ul class="chips">
+<li><a href="#f" data-t="Legends privétour"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h13l-2 4 2 4H5"/></svg> Legends privétour</a></li>
+<li><a href="#f" data-t="Storytelling Tour"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/></svg> Storytelling (Viator)</a></li>
+<li><a href="#f" data-t="GuruWalk"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4c2 0 3 2 3 5s-1 4-3 4-3-1-3-4 1-5 3-5zM6 16h3v3H6zM17 8c2 0 3 2 3 5s-1 4-3 4-3-1-3-4 1-5 3-5z"/></svg> GuruWalk gratis</a></li>
+<li><a href="#f" data-t="Dark Side of Bruges"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg> Dark Side + <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg></a></li></ul></div></div>
+<div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Brugge_Rozenhoedkaai_R02.jpg/1280px-Brugge_Rozenhoedkaai_R02.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V4h6v3M4 12h16"/></svg></div></div><div class="bd"><div>Zondag 22 nov</div><div class="tm">11:00</div><b>Uitchecken boot</b> <span class="fixed ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> geboekt</span><ul><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2M8 3v3M12 3v3"/></svg> Rustig lunchen in de stad</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v2H3z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/><path d="M5 11h14"/></svg> Antoine is BOB naar huis</li></ul></div></div>
+</div>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M11 21l2-7 3 3v4M13 14l-1-5-3 2-1 4M12 9l4 2 2-1"/></svg> Tourkeuze</h2>
+<form id="f">
+<label>Wie ben je? <select id="who"><option>Sjoerd</option><option>Antoine</option><option>Mark</option><option>Brendon</option></select></label>
+<label class="opt"><input type="radio" name="t" value="Legends privétour"> <b>Legends Tours – privétour "Legenden van Brugge"</b><br>Nederlands, ~2u, zelf starttijd kiezen (bv. 15:30 na Fort Lapin), €195 totaal voor 3–5 pers. Beschikbaarheid 21/11 nog niet bevestigd. <a href="https://www.legendstours.be/nl/Priv%C3%A9tour-Legenden-van-Brugge" target="_blank">info</a></label>
+<label class="opt"><input type="radio" name="t" value="Storytelling Tour"> <b>THE Storytelling Tour (Viator)</b><br>Engels, 2–3u, start bij het Belfort, kleine boekingsfee + fooi. Tijden onbevestigd.</label>
+<label class="opt"><input type="radio" name="t" value="GuruWalk"> <b>GuruWalk gratis wandeltour</b><br>Fooi naar keuze, meestal Engels. Ochtend (10:00–11:30) past; 14:00/14:30 botst met Fort Lapin. <a href="https://www.guruwalk.com/free-walking-tour-bruges" target="_blank">info</a></label>
+<label class="opt"><input type="radio" name="t" value="Dark Side of Bruges"> <b>Dark Side of Bruges (avond)</b><br>18:00 of 20:00, 1,5u, Engels.
+<div class="sw"><div class="sw-dial"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" class="sw-bg"/><circle cx="50" cy="50" r="44" class="sw-arc" id="swArc"/></svg><span class="sw-beer"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg></span><i class="sw-hand" id="swHand"></i></div><div class="sw-r"><div class="sw-t">GRATIS BIER!</div><div class="sw-c" id="swT">00:00.00</div><div class="sw-b"><button type="button" id="swGo">Start</button><button type="button" id="swRs" aria-label="Reset"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button></div><div class="sw-s">Klok je eigen bier: hoe snel is het glas leeg?</div></div></div></label>
+<textarea id="rem" placeholder="Opmerking"></textarea><br><br><button type="submit">Keuze opslaan</button>
+</form><div id="sum"></div>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4l-6 3v13l6-3 6 3 6-3V4l-6 3z"/><path d="M9 4v13M15 7v13"/></svg> Meer te doen bij de boot</h2><p>Alles op loopafstand van Kruisvest 11. Openingstijden in november nog even checken.</p><div class="near"><div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Sint-Janshuismolen-20140322-RM-154925.jpg/1280px-Sint-Janshuismolen-20140322-RM-154925.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12l-6-6M12 12l6-6M12 12l-6 6M12 12l6 6"/><path d="M12 12v9M9 21h6"/></svg></div></div><div class="bd" style="padding-top:34px"><b>De molens op de Kruisvest</b><br>Sint-Janshuismolen en Bonne Chieremolen, letterlijk naast de boot. Mooi bij zonsopkomst met koffie (of een pils).</div></div><div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Brugge_-_Kruispoort_2.jpg/1280px-Brugge_-_Kruispoort_2.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l2 1V6h2v3h2V6h4v3h2V6h2v3l2-1v13z"/><path d="M10 21v-5a2 2 0 0 1 4 0v5"/></svg></div></div><div class="bd" style="padding-top:34px"><b>Kruispoort</b><br>Middeleeuwse stadspoort, ~5 min lopen. Prima startpunt voor de wandeling langs de vesten.</div></div><div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Brugge_Jeruzalemkerk_R01.jpg/1280px-Brugge_Jeruzalemkerk_R01.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M10 4h4"/><path d="M6 21V11l6-5 6 5v10z"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/></svg></div></div><div class="bd" style="padding-top:34px"><b>Jeruzalemkerk & Kantcentrum</b><br>Bijzondere kerk uit de 15e eeuw in de Peperstraat, met kantkloswerk ernaast. ~8 min.</div></div><div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Brugge_Vlissinghe_R02.jpg/1280px-Brugge_Vlissinghe_R02.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg></div></div><div class="bd" style="padding-top:34px"><b>Café Vlissinghe</b><br>Een van de oudste cafés van Brugge (Blekersstraat). Bruin café, open haard, kaarten op tafel. ~15 min.</div></div><div class="card"><div class="bd"><div style="font-size:2em"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c6 3 6 15 0 18"/><path d="M5 3v18"/><path d="M3 12h17M17 9l3 3-3 3"/></svg></div><b>Schuttersgilde Sint-Sebastiaan</b><br>Eeuwenoude handboogschutters in de Carmersstraat. ~10 min.</div></div><div class="card"><div class="bd"><div style="font-size:2em"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l5-4 5 4v10z"/><path d="M13 21V9l4-3 4 3v12z"/><path d="M7 21v-4h2v4"/></svg></div><b>Volkskundemuseum</b><br>Oud Brugs leven in godshuizen, met herbergje De Zwarte Kat. ~10 min.</div></div><div class="card"><div class="bd"><div style="font-size:2em"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></div><b>Avondwandeling langs de vesten</b><br>Park, molens en kanaal vanaf de boot. Ideaal om na een avond Brugs Beertje weer bij te komen.</div></div></div><h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg> Parkeren</h2><p>Betaald lossen op ~90 m van de boot. Gratis parking op ~1 km (exacte coördinaten volgen een week vooraf). Alternatief: gratis randparking Coiseaukaai (~10 min lopen).</p>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M10 2h4"/></svg> Looptijden vanaf de boot</h2><p>Fort Lapin ~15 · Cambrinus ~20 · Markt/De Garre ~22 · Brugs Beertje ~27 · Halve Maan ~33 · Cactus ~40 min</p>
+</div>
+<div class="credit">Foto's: Wikimedia Commons (vrije licenties)</div>
+<script>
+const T=new Date('2026-11-20T15:00:00+01:00');setInterval(()=>{let s=(T-new Date())/1e3;if(s<0){cd.textContent='Aan boord!';return}cd.textContent=`Nog ${Math.floor(s/86400)}d ${Math.floor(s%86400/3600)}u ${Math.floor(s%3600/60)}m tot inchecken`},1000);
+const K='tourkeuzes';function show(){const d=JSON.parse(localStorage.getItem(K)||'{}');sum.innerHTML='<h3>Keuzes</h3>'+(Object.entries(d).map(([w,v])=>`<p><b>${w}</b>: ${v.t}${v.r?' – '+v.r:''}</p>`).join('')||'<p>Nog niemand gekozen.</p>')}
+f.onsubmit=e=>{e.preventDefault();const t=document.querySelector('input[name=t]:checked');if(!t)return alert('Kies een tour');const d=JSON.parse(localStorage.getItem(K)||'{}');d[who.value]={t:t.value,r:rem.value};localStorage.setItem(K,JSON.stringify(d));show()};show();
+document.querySelectorAll('.card,label.opt,.band,form,.wrap>h2,.wrap>p').forEach(e=>e.classList.add('rv'));const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+let swS=0,swE=0,swR=false,swRaf;const swF=n=>String(n).padStart(2,'0');function swTick(){const t=swE+(swR?performance.now()-swS:0);const s=t/1000;swT.textContent=`${swF(Math.floor(s/60))}:${swF(Math.floor(s%60))}.${swF(Math.floor(t%1000/10))}`;swHand.style.transform=`rotate(${(s%60)*6}deg)`;swArc.style.strokeDashoffset=276-276*((s%60)/60);if(swR)swRaf=requestAnimationFrame(swTick)}
+swGo.onclick=()=>{const w=document.querySelector('.sw');if(swR){swE+=performance.now()-swS;swR=false;swGo.textContent='Start';w.classList.remove('run');document.querySelector('.sw-beer').style.animationPlayState='paused'}else{swS=performance.now();swR=true;swGo.textContent='Stop';w.classList.add('run');document.querySelector('.sw-beer').style.animationPlayState='running';swTick()}};
+swRs.onclick=()=>{swR=false;swE=0;cancelAnimationFrame(swRaf);swGo.textContent='Start';document.querySelector('.sw').classList.remove('run');swTick()};
+document.querySelectorAll('.chips a').forEach(a=>a.onclick=()=>{const r=document.querySelector(`input[name=t][value="${a.dataset.t}"]`);if(r)r.checked=true});
+const PK='pollAfzakken';function pr(){const d=JSON.parse(localStorage.getItem(PK)||'{"garre":0,"beertje":0,"mine":""}');['garre','beertje'].forEach(k=>{document.getElementById('pv-'+k).textContent=d[k]+(d[k]==1?' stem':' stemmen')});document.querySelectorAll('.pv').forEach(b=>b.classList.toggle('mine',b.dataset.v===d.mine));return d}
+document.querySelectorAll('.pv').forEach(b=>b.onclick=()=>{const d=pr();if(d.mine)d[d.mine]--;if(d.mine===b.dataset.v){d.mine=''}else{d[b.dataset.v]++;d.mine=b.dataset.v}localStorage.setItem(PK,JSON.stringify(d));pr()});pr();
+</script></body></html>

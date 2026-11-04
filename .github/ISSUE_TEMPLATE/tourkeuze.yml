@@ -1,0 +1,37 @@
+name: Tourkeuze Brugge
+description: Kies je tour voor zaterdag 21 november
+title: "Tourkeuze: "
+body:
+  - type: dropdown
+    id: wie
+    attributes:
+      label: Wie ben je?
+      options: [Sjoerd, Antoine, Mark, Brendon]
+    validations:
+      required: true
+  - type: dropdown
+    id: tour
+    attributes:
+      label: Welke tour?
+      options:
+        - Legends Tours privétour (NL, eigen starttijd, €195 totaal)
+        - Storytelling Tour via Viator (EN, fooi)
+        - GuruWalk gratis wandeltour (ochtend)
+        - Dark Side of Bruges avondtour (18:00 of 20:00)
+    validations:
+      required: true
+  - type: dropdown
+    id: kroeg
+    attributes:
+      label: Vrijdagavond afzakken
+      options:
+        - De Garre
+        - Brugs Beertje
+  - type: input
+    id: tijd
+    attributes:
+      label: Voorkeurstijd
+  - type: textarea
+    id: opmerking
+    attributes:
+      label: Opmerking

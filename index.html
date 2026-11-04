@@ -1,0 +1,636 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Operation Brugge – Sj.B.A.M.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;500;700&family=Archivo:wght@700;800;900&family=Anton&family=Bebas+Neue&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2a1d14;--cream:#f7efe3;--paper:#fffaf2;--amber:#c8862a;--amber2:#e7b45a;--canal:#2f5d62;--canal2:#5e8b8f;--brick:#9c4a2f;--muted:#7a6a5c;--r:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px}
+header{min-height:340px;max-height:420px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:32px max(24px,calc((100% - 1040px)/2)) 36px;color:#fff;background:linear-gradient(180deg,rgba(20,30,32,.15) 0%,rgba(20,30,32,.35) 45%,rgba(42,29,20,.92) 100%),url("https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Rozenhoedkaai_%28canal%29_and_Belfry_of_Bruges%2C_Bruges%2C_Belgium_%28Ank_Kumar%2C_Infosys_Limited%29_05.jpg/1280px-Rozenhoedkaai_%28canal%29_and_Belfry_of_Bruges%2C_Bruges%2C_Belgium_%28Ank_Kumar%2C_Infosys_Limited%29_05.jpg") center 40%/cover}
+header h1{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.02;margin:0;letter-spacing:-.5px;text-shadow:0 4px 24px rgba(0,0,0,.4)}
+header p{margin:10px 0 0;font-size:1.1rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber2);font-weight:700}
+#cd{margin-top:22px;padding:10px 18px;border-radius:999px;background:rgba(255,250,242,.14);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);font-weight:600;font-variant-numeric:tabular-nums}
+.wrap{max-width:1040px;margin:auto;padding:24px 24px 40px}
+h2{font-family:"Playfair Display",serif;font-size:clamp(1.7rem,3.5vw,2.3rem);color:var(--canal);margin:72px 0 8px;display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--amber2),transparent);margin-left:8px}
+.wrap>h2:first-child{margin-top:48px}
+.wrap>p{color:var(--muted);max-width:640px;margin:0 0 20px}
+a{color:var(--brick);font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}
+.tl,.near{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:20px}
+.near{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 2px rgba(42,29,20,.06),0 8px 24px rgba(42,29,20,.08);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 2px 4px rgba(42,29,20,.08),0 20px 40px rgba(42,29,20,.18)}
+.card .ph{height:170px;background-size:cover;background-position:center;position:relative}
+.card .ic{position:absolute;bottom:-26px;left:18px;width:56px;height:56px;border-radius:50%;background:var(--amber);border:4px solid var(--paper);display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 6px 14px rgba(0,0,0,.2);z-index:2;transition:transform .35s}
+.card:hover .ic{transform:rotate(-8deg) scale(1.08)}
+.card .bd{padding:38px 20px 22px}
+.near .card .ph{height:130px}.near .card .bd{padding:34px 18px 18px;font-size:.95rem;color:#4a3a2e}
+.near .card .bd b{color:var(--ink);font-size:1.02rem}
+.tl .bd>div:first-child{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.card .tm{font-family:"Playfair Display",serif;font-size:2.4rem;font-weight:800;color:var(--canal);line-height:1.1;margin:2px 0 6px}
+.card ul{list-style:none;padding:12px 0 0;margin:14px 0 0;border-top:1px dashed #e4d6c3}
+.card li{margin:6px 0;font-size:.95rem;color:#4a3a2e}
+.fixed{display:inline-block;margin-left:6px;background:var(--canal);color:#fff;padding:2px 9px;border-radius:999px;font-size:.68rem;font-weight:700;letter-spacing:.08em;vertical-align:middle}
+.band{height:260px;background-size:cover;background-position:center;border-radius:var(--r);margin:40px 0 0}
+form{background:var(--paper);border-radius:var(--r);padding:24px;box-shadow:0 8px 24px rgba(42,29,20,.08);margin-top:20px}
+form>label:first-child{display:block;font-weight:600;margin-bottom:14px}
+select,textarea{width:100%;font:inherit;padding:12px 14px;border:1.5px solid #e4d6c3;border-radius:12px;background:#fff;margin-top:6px;transition:border-color .2s,box-shadow .2s}
+select:focus,textarea:focus{outline:none;border-color:var(--canal2);box-shadow:0 0 0 4px rgba(94,139,143,.18)}
+label.opt{display:block;position:relative;background:#fff;border:1.5px solid #ecdfcc;border-radius:14px;padding:16px 16px 16px 48px;margin:12px 0;cursor:pointer;transition:all .25s;color:#4a3a2e;font-size:.95rem}
+label.opt b{color:var(--ink)}
+label.opt:hover{border-color:var(--amber2);transform:translateX(3px)}
+label.opt input{position:absolute;left:16px;top:19px;accent-color:var(--canal);width:18px;height:18px}
+label.opt:has(input:checked){border-color:var(--canal);background:#f1f6f5;box-shadow:0 0 0 3px rgba(47,93,98,.12)}
+button{margin-top:14px;background:var(--canal);color:#fff;border:0;padding:14px 28px;border-radius:999px;font:700 1rem Inter,sans-serif;cursor:pointer;transition:transform .2s,background .2s;box-shadow:0 6px 16px rgba(47,93,98,.3)}
+button:hover{background:var(--brick);transform:translateY(-2px)}
+#sum{margin-top:18px;background:var(--paper);border-left:4px solid var(--amber);border-radius:12px;padding:6px 20px}
+#sum h3{font-family:"Playfair Display",serif;color:var(--canal);margin:12px 0 4px}
+.credit{font-size:.78rem;color:var(--muted);text-align:center;padding:40px 20px 50px;border-top:1px solid #e4d6c3;margin-top:60px}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.card.rv.in:hover{transform:translateY(-6px)}
+
+.tl{gap:16px;margin-top:16px;align-items:stretch}
+.tl .card{display:flex;flex-direction:column;border:1px solid #eadfce;box-shadow:0 1px 2px rgba(42,29,20,.05);border-radius:20px}
+.tl .card:hover{box-shadow:0 14px 34px rgba(42,29,20,.14)}
+.tl .card .ph{height:140px}
+.tl .card .bd{flex:1;display:flex;flex-direction:column;padding:32px 18px 16px}
+.tl .card .tm{font-family:Inter,sans-serif;font-weight:700;font-size:2rem;letter-spacing:-1px;color:var(--ink);margin:0}
+.tl .card .bd>b{font-size:1.05rem}
+.tl .card ul{margin-top:10px;padding-top:10px;flex:1}
+.tl .card li{margin:3px 0;font-size:.9rem}
+.wrap>h2:first-child{margin-top:28px}
+h2{margin-top:52px}
+
+.fixed.ok{background:#2e7d4f}.fixed.ok::before{content:"";}
+.fixed.q{background:var(--amber);animation:qWob 1.6s ease-in-out infinite}
+.tl{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.tl .card .ic{transition:transform .35s}.tl .card:hover{transform:translateY(-6px) rotate(-.6deg)}
+.tl .card:nth-child(even):hover{transform:translateY(-6px) rotate(.6deg)}
+.qcard{border:2px dashed var(--amber)!important;background:#fff8ec}
+.qph{background:repeating-linear-gradient(45deg,#f3d9a8,#f3d9a8 14px,#f7e5c2 14px,#f7e5c2 28px)}
+.qbig{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 5rem "Playfair Display",serif;color:var(--brick);animation:qWob 1.6s ease-in-out infinite}
+.chips{display:flex;flex-wrap:wrap;gap:6px;border-top:1px dashed #e4d6c3}
+.chips li{margin:0!important}
+.chips a{display:inline-block;border:1.5px solid var(--amber);border-radius:999px;padding:4px 10px;font-size:.82rem;color:var(--ink);background:#fff;transition:all .2s}
+.chips a:hover{background:var(--amber);color:#fff;transform:scale(1.05)}
+@keyframes qWob{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+
+.tl .card li{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:.92rem;letter-spacing:-.1px;color:var(--ink)}
+.tl .card .bd>b{font-family:Archivo,Inter,sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:-.2px}
+.pollq{margin-top:10px!important;color:var(--brick)!important;text-transform:uppercase;letter-spacing:.06em!important;font-size:.8rem!important}
+.poll{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pv{margin:0;padding:10px 6px;border-radius:14px;background:#fff;color:var(--ink);border:2px solid #ecdfcc;box-shadow:none;display:flex;flex-direction:column;align-items:center;gap:2px;font-family:Archivo,Inter,sans-serif;position:relative;overflow:hidden}
+.pv span{font-size:1.5rem;transition:transform .3s}.pv b{font-weight:900;font-size:.9rem}.pv small{font:500 .7rem Inter,sans-serif;color:var(--muted)}
+.pv em{font-style:normal;font-weight:900;font-size:1.1rem;color:var(--canal)}
+.pv:hover{background:#fff8ec;border-color:var(--amber);transform:translateY(-2px)}.pv:hover span{transform:scale(1.25) rotate(-10deg)}
+.pv.mine{border-color:var(--canal);background:#eef5f4}.pv.mine::after{content:"\2713";position:absolute;top:4px;right:8px;color:var(--canal);font-weight:900}
+
+body{background:#e9e3da}
+:root{--paper:#f4efe7;--cream:#e9e3da}
+.card,form,label.opt,select,textarea,#sum{background-color:#f4efe7}
+label.opt{background:#f6f1ea}
+.qcard{border:1.5px solid #e2c48f!important;background:#f6eedf!important}
+.qph{background:linear-gradient(135deg,#efdcb8,#f3e6cc)!important}
+.qbig{animation:none!important;font-size:3.6rem!important;color:#b07a3a!important;opacity:.85}
+.fixed.q{animation:none!important;background:#c8862a}
+.qcard:hover{transform:translateY(-4px)!important}
+
+.ico{width:1.1em;height:1.1em;vertical-align:-.18em;flex:none}
+li .ico,.fixed .ico,.chips .ico,h2 .ico{margin-right:.35em}
+.card .ic .ico{width:28px;height:28px;color:#fff;margin:0}
+.sw-beer .ico{width:34px;height:34px;color:var(--amber)}
+.pv span .ico{width:26px;height:26px;color:var(--canal)}
+h2 .ico{width:1em;height:1em;color:var(--amber)}
+.near .card .bd>.ico,.near .bd div .ico{width:30px;height:30px;color:var(--canal)}
+#swRs .ico{margin:0;width:16px;height:16px;vertical-align:-3px}
+.fixed .ico{width:.95em;height:.95em;margin-right:.2em;stroke-width:3}
+
+/* === JOKER / OPERATION BRUGGE THEME === */
+:root{--hero:url("https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Rozenhoedkaai_%28canal%29_and_Belfry_of_Bruges%2C_Bruges%2C_Belgium_%28Ank_Kumar%2C_Infosys_Limited%29_05.jpg/1280px-Rozenhoedkaai_%28canal%29_and_Belfry_of_Bruges%2C_Bruges%2C_Belgium_%28Ank_Kumar%2C_Infosys_Limited%29_05.jpg");--ink:#f2f2f2;--paper:#1a1a1a;--cream:#121212;--amber:#e7b45a;--amber2:#f0c674;--canal:#e7b45a;--canal2:#f0c674;--brick:#ffffff;--muted:#a9a9a9}
+body{background:#121212 radial-gradient(circle at 20% 0,#3a2614 0,transparent 50%);color:#eee}
+header{background:linear-gradient(115deg,rgba(0,0,0,.92) 0 38%,rgba(231,180,90,.45) 38% 40%,rgba(0,0,0,.35) 40%),var(--hero) center 40%/cover!important;clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
+header h1{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:1px;transform:skewX(-8deg) rotate(-2deg);text-shadow:4px 4px 0 #e60012,8px 8px 0 #000}
+header p{font-family:"Bebas Neue",sans-serif;font-size:1.5rem;color:#fff;background:#e7b45a;padding:2px 14px;transform:skewX(-12deg);display:inline-block}
+#cd{background:#000;border:2px solid #e7b45a;border-radius:0;transform:skewX(-8deg);font-family:"Bebas Neue",sans-serif;font-size:1.4rem;letter-spacing:1px}
+h2{font-family:Anton,Impact,sans-serif;text-transform:uppercase;color:#fff;letter-spacing:1px;transform:skewX(-6deg)}
+h2::after{background:linear-gradient(90deg,#e7b45a,transparent);height:4px}
+h2 .ico{color:#e7b45a}
+.card,.tl .card{background:#1a1a1a!important;border:1px solid #2c2c2c!important;border-radius:4px!important;clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%)}
+.card:hover,.tl .card:hover{box-shadow:6px 6px 0 #e7b45a!important}
+.card .ph{filter:grayscale(.55) contrast(1.15)}.card:hover .ph{filter:none}
+.card .ic{background:#e7b45a;border:3px solid #000;border-radius:0;transform:rotate(45deg)}
+.card .ic .ico{transform:rotate(-45deg)}
+.card:hover .ic{transform:rotate(35deg) scale(1.08)}
+.card .tm,.tl .card .tm{font-family:Anton,Impact,sans-serif;color:#fff!important;letter-spacing:1px}
+.tl .card .bd>b,.tl .card li{color:#eee!important}
+.tl .bd>div:first-child{color:#e7b45a;font-family:"Bebas Neue",sans-serif;font-size:1rem}
+.card ul{border-top:1px dashed #3a3a3a}
+.near .card .bd,.near .card .bd b{color:#ddd!important}
+.fixed{border-radius:0;transform:skewX(-10deg);font-family:"Bebas Neue",sans-serif;font-size:.85rem}
+.fixed.ok{background:#fff;color:#000}
+.qcard{background:#1a1a1a!important;border:2px solid #e7b45a!important}
+.qph{background:repeating-linear-gradient(-45deg,#000 0 14px,#2a1d14 14px 28px)!important}
+.qbig{color:#e7b45a!important;font-family:"Permanent Marker",cursive!important;opacity:1}
+.chips a{background:#000;color:#fff;border:1.5px solid #e7b45a;border-radius:0;transform:skewX(-8deg)}
+.chips a:hover{background:#e7b45a}
+form,#sum{background:#1a1a1a!important;border-radius:0;border-left:4px solid #e7b45a}
+label.opt{background:#202020!important;border-color:#333;border-radius:0;color:#ccc}
+label.opt b{color:#fff}
+label.opt:has(input:checked){background:#3a2614!important;border-color:#e7b45a}
+select,textarea{background:#0d0d0d!important;color:#eee;border-color:#333;border-radius:0}
+button{background:#e7b45a;border-radius:0;transform:skewX(-8deg);font-family:"Bebas Neue",sans-serif;font-size:1.2rem;letter-spacing:1px;box-shadow:4px 4px 0 #000}
+button:hover{background:#fff;color:#000}
+.pv{background:#0d0d0d!important;color:#fff!important;border:2px solid #333;border-radius:0;transform:none}
+.pv span .ico,.pv em{color:#e7b45a}.pv small{color:#999}
+.pv.mine{border-color:#e7b45a;background:#3a2614!important}
+.sw{background:#000;border:2px solid #e7b45a;border-radius:0}
+.sw-t{font-family:Anton,Impact,sans-serif;color:#e7b45a}
+.sw-bg{fill:#111;stroke:#333}.sw-arc{stroke:#e7b45a}.sw-hand{background:#fff}
+.sw-beer .ico{color:#fff}
+.sw-b button{background:#e7b45a}
+a{color:#f0c674}
+.credit{border-top:1px solid #2c2c2c;color:#777}
+.calling{display:block;text-align:center;font-family:"Permanent Marker",cursive;color:#e7b45a;font-size:1.3rem;margin:30px 0 0;transform:rotate(-2deg)}
+
+h2{color:#cfcfcf}
+.wrap>h2:first-child{color:#e7b45a;text-shadow:2px 2px 0 #000}
+.card .tm,.tl .card .tm{color:#e7b45a!important;font-family:Anton,Impact,sans-serif;text-shadow:2px 2px 0 #000}
+.tl .card .bd>b{color:#d4d4d4!important;font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.35rem;letter-spacing:.5px}
+.tl .card li{color:#b8b8b8!important}
+.fixed.ok{background:#3a3a3a;color:#e6e6e6}
+
+.tl{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;align-items:stretch}
+@media(max-width:960px){.tl{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.tl{grid-template-columns:1fr}}
+.tl .card .ph{height:130px;flex:none}
+.tl .card .bd{display:grid;grid-template-rows:auto 3rem 3.4rem 1fr;align-content:start;row-gap:2px}
+.tl .bd>div:first-child{height:1.4rem;line-height:1.4rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl .card .tm{font-size:2.5rem!important;line-height:3rem!important;height:3rem;margin:0!important;white-space:nowrap}
+.tl .card .bd>b{display:block;line-height:1.15;align-self:start}
+.tl .card .bd>.fixed{position:absolute;top:10px;right:12px;margin:0}
+.tl .card .bd{position:relative}
+.tl .card ul{margin:6px 0 0!important;align-self:stretch}
+
+body{background:#16110c radial-gradient(circle at 20% 0,#3a2614 0,transparent 55%)}
+.sw{background:linear-gradient(135deg,#2a1d14,#4a2e18)!important;border:2px solid #e60012!important}
+.card,.tl .card,form,#sum{background:linear-gradient(160deg,#21170f,#2c1e13)!important;border-color:#4a3320!important}
+label.opt,.pv,select,textarea{background:#1c140d!important;border-color:#4a3320!important}
+.card .ic{color:#2a1d14}.card .ic .ico{color:#2a1d14!important}
+button,.sw-b button{color:#2a1d14}
+.fixed.q{color:#2a1d14}
+header p{color:#2a1d14}
+.wrap>h2:first-child,.card .tm{text-shadow:2px 2px 0 #000}
+
+.card,.tl .card,form,#sum,.sw-wrap,section>.card,.near li,.pk,.wk{border:2px solid #e60012!important;box-shadow:4px 4px 0 #000}
+.pv,label.opt,.chip,.fixed,.sw-b button,select,textarea,input[type=text]{border:1px solid rgba(230,0,18,.45)!important}
+.sw-b{display:none!important}
+.sw-c{font-variant-numeric:tabular-nums}
+
+.qi{display:inline-grid;place-items:center;width:1.25rem;height:1.25rem;margin-left:.4rem;border-radius:50%;background:#2a1d14;color:#e7b45a;font:700 .8rem Archivo,sans-serif;border:1px solid rgba(230,0,18,.45)!important;cursor:pointer;vertical-align:middle;padding:0}
+.qi:hover,.qi[aria-expanded=true]{background:#e7b45a;color:#2a1d14}
+.qbox{display:none;margin:.5rem 0 .2rem;padding:.6rem .75rem;background:linear-gradient(135deg,#2a1d14,#4a2e18);border:1px solid rgba(230,0,18,.45);color:#f3e6cf;font-size:.85rem;line-height:1.4;text-align:left}
+.qbox.on{display:block}.qbox b{color:#e7b45a;font-weight:700}
+
+.card,.tl .card,label.opt,.pv,.qi,button,a,.chip,.near li{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease,filter .25s ease}
+.card:hover,.tl .card:hover{transform:translateY(-3px) scale(1.015);box-shadow:4px 4px 0 #000,0 0 22px rgba(231,180,90,.35)}
+label.opt:hover{transform:translateX(3px);box-shadow:0 0 16px rgba(231,180,90,.3);border-color:rgba(230,0,18,.8)!important}
+.pv:hover,.chip:hover,button:hover{transform:scale(1.05);box-shadow:0 0 14px rgba(231,180,90,.45)}
+.qi:hover{transform:scale(1.15) rotate(-8deg);box-shadow:0 0 12px rgba(231,180,90,.7)}
+a:hover{color:#f0c674;text-shadow:0 0 8px rgba(231,180,90,.55)}
+button:active,.pv:active,.qi:active{transform:scale(.97)}
+
+:root{--gap:1.25rem}
+html{scroll-behavior:smooth}
+body{line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap,main{max-width:1080px;margin-inline:auto;padding-inline:clamp(1rem,3vw,1.75rem)}
+section{margin-block:clamp(2rem,5vw,3.25rem)}
+h2{margin:0 0 var(--gap);letter-spacing:.04em}
+h3{margin:0 0 .5rem}
+p{margin:0 0 .75rem}
+.tl{gap:var(--gap)!important;align-items:stretch}
+.card,.tl .card,form,#sum{padding:1.25rem 1.35rem!important}
+label.opt{display:block;padding:.85rem 1rem!important;margin-bottom:.65rem}
+label.opt:last-of-type{margin-bottom:0}
+.pv{padding:.5rem .9rem;min-height:2.4rem}
+button{min-height:2.4rem}
+.near ul,.near ol{display:grid;gap:.6rem;padding:0;list-style:none}
+.near li{padding:.7rem .9rem}
+::selection{background:#e7b45a;color:#2a1d14}
+:focus-visible{outline:2px solid #e7b45a;outline-offset:3px}
+hr{border:0;height:1px;background:linear-gradient(90deg,transparent,rgba(231,180,90,.4),transparent);margin:2rem 0}
+footer{opacity:.85;padding-block:2rem;text-align:center}
+
+.fx{position:fixed;pointer-events:none;z-index:9999;left:0;top:0}
+.fx-r{width:26px;height:26px;color:#e7b45a;transform:translate(-50%,-50%);animation:fxUp .5s cubic-bezier(.3,.7,.4,1) forwards}
+.fx-r svg{width:100%;height:100%;filter:drop-shadow(0 0 6px rgba(231,180,90,.7))}
+@keyframes fxUp{0%{opacity:0;transform:translate(-50%,-50%) scale(.4)}25%{opacity:1}100%{transform:translate(-50%,-260%) scale(1)}}
+.fx-b{animation:fxPop .45s ease-out forwards}
+@keyframes fxPop{0%{transform:translate(-50%,-260%) scale(1)}40%{transform:translate(-50%,-260%) scale(1.35) rotate(-10deg)}100%{opacity:0;transform:translate(-50%,-300%) scale(.9) rotate(8deg)}}
+.fx-s{width:6px;height:6px;border-radius:50%;transform:translate(-50%,-50%);animation:fxSp .7s ease-out forwards}
+.fx-s.st{border-radius:0;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);width:9px;height:9px}
+@keyframes fxSp{0%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.3) rotate(180deg)}}
+
+.gc{display:flex;gap:.8rem;align-items:center;margin:0 0 1rem;padding:.75rem 1rem;background:linear-gradient(135deg,#2a1d14,#4a2e18);border:1px solid rgba(230,0,18,.45);color:#f3e6cf;font-size:.9rem;transform:rotate(-.6deg)}
+.gc .gcr{flex:none;width:2.4rem;height:2.4rem;border-radius:50%;border:2px solid #e7b45a;display:grid;place-items:center;color:#e7b45a;font:1rem Anton,Impact,sans-serif;box-shadow:0 0 12px rgba(231,180,90,.45)}
+.gc b{color:#e7b45a;font-family:Anton,Impact,sans-serif;letter-spacing:.04em;font-weight:400}
+.gc small{display:block;opacity:.6;font-size:.72rem}
+
+.dk{width:132px!important;height:132px!important;flex:none}
+.dk svg{width:100%;height:100%;filter:drop-shadow(0 6px 14px rgba(0,0,0,.55))}
+.dk-rim{fill:#2a1d14;stroke:#e7b45a;stroke-width:1.5}
+.dk-face{fill:#f4ecdc}
+.tk1{stroke:#3a2614;stroke-width:.6}.tk5{stroke:#1d140d;stroke-width:2.2}
+.dk-lb{font:600 4.2px Archivo,sans-serif;letter-spacing:1.2px;fill:#8a6a3e;text-anchor:middle}
+.dk-h{stroke:#1d140d;stroke-width:3.2;stroke-linecap:butt}
+.dk-m{stroke:#1d140d;stroke-width:2.2;stroke-linecap:butt}
+.dk-s{stroke:#e60012;stroke-width:.8}.dk-sd{fill:#e60012}
+.dk-c{fill:#e7b45a;stroke:#1d140d;stroke-width:.6}
+#dkH,#dkM,#dkS{transform-origin:50px 50px;transform-box:view-box}
+#dkS{transition:transform .25s cubic-bezier(.4,2.2,.6,1)}
+
+.fc{display:flex;align-items:flex-end;gap:.35rem;margin:.5rem 0 .6rem;flex-wrap:wrap}
+.fg{display:flex;flex-direction:column;align-items:center;gap:.25rem}
+.fg .fds{display:flex;gap:3px}
+.fg small{font:.62rem Archivo,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#e7b45a;opacity:.8}
+.fsep{font:2rem Anton,Impact,sans-serif;color:#e7b45a;padding-bottom:1.15rem;line-height:1}
+.fd{position:relative;width:2.1rem;height:3rem;perspective:220px;font:2.2rem/3rem Anton,Impact,sans-serif;color:#f4ecdc;text-align:center}
+.fh{position:absolute;left:0;right:0;height:50%;overflow:hidden;background:linear-gradient(#2a1d14,#3a2614);border:1px solid rgba(230,0,18,.35)}
+.fh span{display:block;height:3rem}
+.fh.t{top:0;border-radius:4px 4px 0 0;border-bottom:none}
+.fh.b{bottom:0;border-radius:0 0 4px 4px;background:linear-gradient(#3a2614,#4a2e18);border-top:none}
+.fh.b span{margin-top:-1.5rem}
+.fd::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:#000;z-index:5}
+.ff{position:absolute;left:0;right:0;bottom:0;height:50%;transform-origin:50% 0;transform-style:preserve-3d;z-index:4}
+.ff .fh{height:100%;backface-visibility:hidden}
+.ff .fh.bk{transform:rotateX(180deg);border-radius:4px 4px 0 0;background:linear-gradient(#2a1d14,#3a2614)}
+.ff .fh.bk span{margin-top:0}
+.ff.go{animation:flapUp .5s cubic-bezier(.45,.05,.55,.95) forwards}
+@keyframes flapUp{0%{transform:rotateX(0)}100%{transform:rotateX(180deg)}}
+.ff.go .fh.b{animation:shade .5s forwards}
+@keyframes shade{to{filter:brightness(.55)}}
+
+#cd .fc{justify-content:center;margin:.75rem 0 .25rem}
+.fcl{font:.75rem Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#e7b45a;text-align:center;opacity:.85}
+.ghb{display:inline-flex;align-items:center;gap:.5rem;margin-top:.9rem;padding:.6rem 1rem;background:linear-gradient(135deg,#2a1d14,#4a2e18);border:1px solid rgba(230,0,18,.45);color:#e7b45a;font:1rem "Bebas Neue",Anton,sans-serif;letter-spacing:.08em;text-decoration:none;cursor:pointer}
+.ghn{display:block;font-size:.72rem;opacity:.6;margin-top:.3rem}
+
+#f{background:#1c140d!important;border-radius:8px!important;color:#c9d1d9;font-family:-apple-system,"Segoe UI",Archivo,sans-serif;transform:none!important}
+#f label.opt{background:#22180f!important;border:1px solid #3d2c1c!important;border-radius:6px;color:#c9d1d9;transform:none}
+#f label.opt:hover{border-color:#2f81f7!important;box-shadow:0 0 0 3px rgba(47,129,247,.15);transform:none}
+#f label.opt:has(input:checked){border-color:#2f81f7!important;background:#1f2a3a!important}
+#f label.opt b{color:#e6edf3}
+#f input[type=radio]{accent-color:#2f81f7}
+#f select,#f textarea,#f input[type=text]{background:#0f0a06!important;color:#e6edf3;border:1px solid #3d2c1c!important;border-radius:6px;padding:.45rem .7rem;font:inherit}
+#f select:focus,#f textarea:focus,#f input:focus{outline:none;border-color:#2f81f7!important;box-shadow:0 0 0 3px rgba(47,129,247,.3)}
+#f button[type=submit]{background:#238636!important;color:#fff!important;border:1px solid rgba(240,246,252,.1)!important;border-radius:6px;font:600 .9rem -apple-system,"Segoe UI",sans-serif;padding:.45rem 1rem;transform:none}
+#f button[type=submit]:hover{background:#2ea043!important;transform:none}
+#f .ghb{border-radius:6px;background:#21262d;border:1px solid #30363d!important;color:#c9d1d9;font:600 .9rem -apple-system,"Segoe UI",sans-serif;letter-spacing:0}
+#f .ghb:hover{border-color:#8b949e!important;transform:none}
+#f a{color:#2f81f7}
+#f .qbox{border-radius:6px}
+.pv{border-radius:6px!important;background:#21262d!important;color:#c9d1d9!important;border:1px solid #30363d!important;font:600 .85rem -apple-system,"Segoe UI",sans-serif;transform:none}
+.pv:hover{border-color:#2f81f7!important;transform:none}
+.pv.mine{background:#1f2a3a!important;border-color:#2f81f7!important;color:#e6edf3!important;box-shadow:0 0 0 3px rgba(47,129,247,.2)}
+.ph-car{background:radial-gradient(circle at 30% 20%,#4a2e18,#2a1d14 70%)}
+#f .kh{margin:1.25rem 0 .6rem;padding-top:1rem;border-top:1px solid #3d2c1c;font:600 1rem -apple-system,"Segoe UI",sans-serif;color:#e6edf3}
+
+.ng-wrap{max-width:1080px;margin:3rem auto;padding-inline:clamp(1rem,3vw,1.75rem)}
+.ng-sub{opacity:.8}
+.ng{position:relative;height:360px;border:2px solid #e60012;box-shadow:4px 4px 0 #000;background:radial-gradient(ellipse at 50% 120%,#3a2614,#120c07 70%);overflow:hidden;user-select:none}
+.ng-sky{position:absolute;left:0;right:0;bottom:0;width:100%;height:60%}
+.ng-lamps{position:absolute;inset:0}
+.lp{position:absolute;bottom:22%;width:34px;height:110px;margin-left:-17px;background:none;border:0;padding:0;cursor:pointer}
+.lp i{position:absolute;left:16px;top:28px;width:3px;bottom:0;background:#2a1d14}
+.lp b{position:absolute;left:5px;top:0;width:24px;height:30px;border:2px solid #4a2e18;border-radius:4px 4px 8px 8px;background:#1d140d;transition:background .4s,box-shadow .4s}
+.lp.on b{background:radial-gradient(#fff3d6,#e7b45a 60%,#c8892f);box-shadow:0 0 18px 6px rgba(231,180,90,.65),0 0 60px 20px rgba(231,180,90,.25)}
+.lp .fl{position:absolute;left:17px;top:15px;width:10px;height:10px;margin:-5px;border-radius:50%;background:#fff3d6;opacity:0;pointer-events:none}
+.lp.flash .fl{animation:lpF .6s ease-out}
+@keyframes lpF{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(9)}}
+.ng-score{position:absolute;top:.8rem;right:1rem;font:1rem "Bebas Neue",Anton,sans-serif;letter-spacing:.1em;color:#e7b45a}
+.bg{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;background:rgba(18,12,7,.82);animation:bgIn .6s ease}
+.bg[hidden]{display:none}
+@keyframes bgIn{from{opacity:0}}
+.bg-t{color:#f4ecdc;font-size:.9rem;opacity:.85}
+.bg-glass{position:relative;width:110px;height:180px;border:3px solid rgba(244,236,220,.7);border-top:none;border-radius:0 0 18px 18px;overflow:hidden;cursor:crosshair;touch-action:none;transition:box-shadow .3s}
+.bg-fill{position:absolute;left:0;right:0;bottom:0;height:0;background:linear-gradient(#f0c674,#c8892f);transition:height .15s}
+.bg-foam{position:absolute;left:0;right:0;top:-10px;height:14px;background:#fff8e7;border-radius:8px;opacity:0;transition:opacity .3s}
+.bg-p{font:1.6rem Anton,Impact,sans-serif;color:#e7b45a}
+.bg-r{border-radius:6px;padding:.45rem 1rem;background:#2a1d14;color:#e7b45a;border:1px solid rgba(230,0,18,.45);cursor:pointer}
+/* platformer */
+.ng{height:auto;aspect-ratio:16/9;min-height:300px;touch-action:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.ng canvas{display:block;width:100%;height:100%;touch-action:none}
+.ng-hud{position:absolute;top:.6rem;left:.8rem;right:3.2rem;display:flex;gap:1rem;flex-wrap:wrap;font:1rem "Bebas Neue",Anton,sans-serif;letter-spacing:.1em;color:#e7b45a;pointer-events:none}
+.ng-hud b{color:#f4ecdc;font-weight:400}
+.ng-help{position:absolute;top:.5rem;right:.6rem;width:44px;height:44px;margin:0;font-size:1.1rem;z-index:5}
+.ng-leg{position:absolute;top:3.4rem;right:.6rem;left:.6rem;max-width:440px;margin-left:auto;z-index:6;background:linear-gradient(#4a2e18,#2a1d14);color:#f4ecdc;border:1px solid rgba(230,0,18,.45);border-radius:8px;padding:.8rem 1rem;font:.85rem/1.45 Archivo,sans-serif;box-shadow:0 0 18px rgba(231,180,90,.25)}
+.ng-leg[hidden]{display:none}
+.ng-leg h4{margin:0 0 .4rem;font:1.3rem "Bebas Neue",Anton,sans-serif;letter-spacing:.08em;color:#e7b45a}
+.ng-leg h5{margin:.5rem 0 .2rem;color:#f0c674;font:700 .8rem Archivo,sans-serif;text-transform:uppercase;letter-spacing:.06em}
+.ng-leg ul{margin:0;padding-left:1.1rem}
+.ng-ctl{position:absolute;left:0;right:0;bottom:.6rem;display:flex;justify-content:space-between;padding:0 .6rem;pointer-events:none;z-index:4}
+.ng-ctl div{display:flex;gap:.6rem}
+.ng-ctl button{pointer-events:auto;width:56px;height:56px;border-radius:50%;background:rgba(42,29,20,.75);color:#e7b45a;border:1px solid rgba(230,0,18,.45);font:1.4rem Archivo,sans-serif;touch-action:none;-webkit-tap-highlight-color:transparent}
+.ng-ctl button.dn{background:#e7b45a;color:#2a1d14;box-shadow:0 0 14px rgba(231,180,90,.7)}
+@media (hover:hover) and (pointer:fine){.ng-ctl{display:none}}
+.ng-pan{position:absolute;inset:0;z-index:7;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;padding:1rem;text-align:center;background:rgba(18,12,7,.88);color:#f4ecdc;animation:bgIn .5s ease}
+.ng-pan[hidden]{display:none}
+.ng-pan h3{margin:0;font:clamp(1.4rem,4vw,2.2rem) Anton,Impact,sans-serif;color:#e7b45a;letter-spacing:.04em}
+.ng-pan p{margin:0;max-width:34rem}
+.ng-btns{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
+.ng-btn{min-height:44px;border-radius:6px;padding:.5rem 1.1rem;background:#2a1d14;color:#e7b45a;border:1px solid rgba(230,0,18,.45);font:1.05rem "Bebas Neue",Anton,sans-serif;letter-spacing:.08em;cursor:pointer}
+.ng-btn:hover{background:#e7b45a;color:#2a1d14;box-shadow:0 0 14px rgba(231,180,90,.6)}
+.ng-btn.ok{background:#3c5a2a;color:#f4ecdc}.ng-btn.no{background:#5a1a12;color:#f4ecdc}
+.ng-opts{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;width:min(100%,34rem)}
+@media (max-width:520px){.ng-opts{grid-template-columns:1fr}}
+.ng-fb{min-height:1.4em;color:#f0c674}
+.bg{z-index:6}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1;transform:none}}
+
+.sw{display:flex;align-items:center;gap:16px;margin-top:12px;padding:12px 16px;border-radius:16px;background:linear-gradient(135deg,#2a1d14,#4a2e18);color:#fff;box-shadow:0 8px 20px rgba(200,134,42,.35);}.sw.run{animation:swPulse 1.2s ease-in-out infinite}
+.sw-dial{position:relative;width:74px;height:74px;flex:none}
+.sw-dial::before{content:"";position:absolute;top:-8px;left:50%;width:14px;height:10px;margin-left:-7px;background:var(--amber2);border-radius:4px 4px 0 0}
+.sw-dial svg{width:100%;height:100%;transform:rotate(-90deg)}
+.sw-bg{fill:#fffaf2;stroke:#5a3d24;stroke-width:8}
+.sw-arc{fill:none;stroke:var(--amber2);stroke-width:8;stroke-linecap:round;stroke-dasharray:276;stroke-dashoffset:276}
+.sw-beer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30px;animation:swWob 1.2s ease-in-out infinite}
+.sw-hand{position:absolute;left:50%;top:10px;width:3px;height:28px;margin-left:-1.5px;background:var(--brick);border-radius:2px;transform-origin:50% 100%}
+.sw-t{font-family:"Playfair Display",serif;font-weight:800;font-size:1.4rem;color:var(--amber2);letter-spacing:.04em}
+.sw-c{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.15rem}
+.sw-b{display:flex;gap:8px;margin:6px 0}.sw-b button{margin:0;padding:6px 14px;font-size:.85rem;background:var(--amber);box-shadow:none}.sw-b button:hover{background:var(--amber2);color:var(--ink)}.sw-c{font-size:1.6rem!important;font-family:ui-monospace,Menlo,monospace}
+.sw-s{font-size:.78rem;opacity:.75}
+@keyframes swSpin{to{transform:rotate(360deg)}}
+@keyframes swFill{to{stroke-dashoffset:0}}
+@keyframes swWob{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg) scale(1.1)}}
+@keyframes swPulse{0%,100%{box-shadow:0 8px 20px rgba(200,134,42,.3)}50%{box-shadow:0 8px 32px rgba(231,180,90,.7)}}
+</style></head><body>
+<header><h1><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg> Operation Brugge</h1><p>Sj.B.A.M. · 20–22 november 2026</p><div id="cd"></div></header>
+<div class="wrap">
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Planning</h2><div class="tl">
+<div class="card"><div class="ph ph-car"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v2H3z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/><path d="M5 11h14"/></svg></div></div><div class="bd"><div>Vrijdag 20 nov</div><div class="tm">12:00</div><b>Auto ophalen</b><ul><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v2H3z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/><path d="M5 11h14"/></svg> Daarna richting Brugge (~4u50)</li></ul></div></div>
+<div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Sint-Janshuismolen-20140322-RM-154925.jpg/1280px-Sint-Janshuismolen-20140322-RM-154925.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l2 3h14l2-3z"/><path d="M5 17V12h14v5"/><path d="M8 12V8h6v4"/><path d="M11 8V4"/></svg></div></div><div class="bd"><div>Vrijdag 20 nov</div><div class="tm">15:00</div><b>Inchecken MS Rio Claro</b> <span class="fixed ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> geboekt</span><ul><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v2H3z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/><path d="M5 11h14"/></svg> ~12:00 vertrek Leek (~4u50)</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg> Kruisvest 11, naast de molens</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/></svg> Afzakken: <a href="#f">kies in het formulier</a></li></ul></div></div>
+<div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Brugge%2C_de_Belfort-Hal_of_Halletoren_%28oeg29457%29_op_de_Markt_2e_poging_foto4_2015-09-27_19.26.jpg/1280px-Brugge%2C_de_Belfort-Hal_of_Halletoren_%28oeg29457%29_op_de_Markt_2e_poging_foto4_2015-09-27_19.26.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6l-1 9a2 2 0 0 1-4 0z"/><path d="M14 4h6l-1 9a2 2 0 0 1-4 0z"/><path d="M7 15v5M17 15v5M5 20h4M15 20h4"/></svg></div></div><div class="bd"><div>Zaterdag 21 nov</div><div class="tm">14:00</div><b>Proeverij Fort Lapin</b> <span class="fixed ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> bevestigd</span><ul><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M11 21l2-7 3 3v4M13 14l-1-5-3 2-1 4M12 9l4 2 2-1"/></svg> Ochtend: tour of fietsrondje</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-6 9 6z"/><path d="M3 14h18M4 17h16v2H4z"/></svg> ~12:00 lunch</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg> Dreef ter Panne 2 · €16 pp · ~15 min lopen</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg> Avond: Cactus of Dark Side-tour</li></ul></div></div>
+<div class="card qcard"><div class="ph qph"><span class="qbig">?</span><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.7"/><path d="M12 17h.01"/></svg></div></div><div class="bd"><div>Zaterdag 21 nov</div><div class="tm">Tour?</div><b>Geef je keuze door</b> <span class="fixed q">? open</span><ul class="chips">
+<li><a href="#f" data-t="Legends privétour"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h13l-2 4 2 4H5"/></svg> Legends privétour</a></li>
+<li><a href="#f" data-t="Storytelling Tour"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/></svg> Storytelling (Viator)</a></li>
+<li><a href="#f" data-t="GuruWalk"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4c2 0 3 2 3 5s-1 4-3 4-3-1-3-4 1-5 3-5zM6 16h3v3H6zM17 8c2 0 3 2 3 5s-1 4-3 4-3-1-3-4 1-5 3-5z"/></svg> GuruWalk gratis</a></li>
+<li><a href="#f" data-t="Dark Side of Bruges"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg> Dark Side + <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg></a></li></ul></div></div>
+<div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Brugge_Rozenhoedkaai_R02.jpg/1280px-Brugge_Rozenhoedkaai_R02.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V4h6v3M4 12h16"/></svg></div></div><div class="bd"><div>Zondag 22 nov</div><div class="tm">11:00</div><b>Uitchecken boot</b> <span class="fixed ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> geboekt</span><ul><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2M8 3v3M12 3v3"/></svg> Rustig lunchen in de stad</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v2H3z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/><path d="M5 11h14"/></svg> Antoine is BOB naar huis</li></ul></div></div>
+</div>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M11 21l2-7 3 3v4M13 14l-1-5-3 2-1 4M12 9l4 2 2-1"/></svg> Tourkeuze</h2>
+<form id="f">
+<label>Wie ben je? <select id="who"><option>Sjoerd</option><option>Antoine</option><option>Mark</option><option>Brendon</option></select></label>
+<div class="gc"><span class="gcr">GC</span><div><b>LID VAN DE GOUDEN CIRKEL?</b> Leden van de Gouden Cirkel van het Gouden Carolus krijgen korting.</div></div><label class="opt"><input type="radio" name="t" value="Legends privétour"> <b>Legends Tours – privétour "Legenden van Brugge"</b><br>Nederlands, ~2u, zelf starttijd kiezen (bv. 15:30 na Fort Lapin), €195 totaal voor 3–5 pers. Beschikbaarheid 21/11 nog niet bevestigd. <a href="https://www.legendstours.be/nl/Priv%C3%A9tour-Legenden-van-Brugge" target="_blank">info</a></label>
+<label class="opt"><input type="radio" name="t" value="Storytelling Tour"> <b>THE Storytelling Tour (Viator)</b><br>Engels, 2–3u, start bij het Belfort, kleine boekingsfee + fooi. Tijden onbevestigd.</label>
+<label class="opt"><input type="radio" name="t" value="GuruWalk"> <b>GuruWalk gratis wandeltour</b><br>Fooi naar keuze, meestal Engels. Ochtend (10:00–11:30) past; 14:00/14:30 botst met Fort Lapin. <a href="https://www.guruwalk.com/free-walking-tour-bruges" target="_blank">info</a></label>
+<label class="opt"><input type="radio" name="t" value="Dark Side of Bruges"> <b>Dark Side of Bruges (avond)</b><br>18:00 of 20:00, 1,5u, Engels.
+<div class="sw"><div class="sw-r"><div class="sw-t">GRATIS BIER!</div><div class="fc" id="fc" aria-live="off"></div><div class="sw-c" id="swT" hidden>00:00.00</div><div class="sw-b"><button type="button" id="swGo">Start</button><button type="button" id="swRs" aria-label="Reset"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button></div><div class="sw-s">Aftellen naar zaterdag 18:00: het eerste gratis bier.</div></div></div></label>
+<textarea id="rem" placeholder="Opmerking"></textarea><br><br><h3 class="kh">Vrijdagavond: waar zakken we af?</h3><label class="opt"><input type="radio" name="k" value="garre"> <b>De Garre</b><br>Klein café in een steegje bij de Markt.</label><label class="opt"><input type="radio" name="k" value="beertje"> <b>Brugs Beertje</b><br>Bruin bierkroegje met een grote bierkaart.</label><button type="submit">Keuze opslaan</button>
+<button type="button" class="ghb" id="ghb">Stuur naar GitHub</button><span class="ghn">Werkt pas als de repo op GitHub staat.</span></form><div id="sum"></div>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4l-6 3v13l6-3 6 3 6-3V4l-6 3z"/><path d="M9 4v13M15 7v13"/></svg> Meer te doen bij de boot</h2><p>Alles op loopafstand van Kruisvest 11. Openingstijden in november nog even checken.</p><div class="near"><div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Sint-Janshuismolen-20140322-RM-154925.jpg/1280px-Sint-Janshuismolen-20140322-RM-154925.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12l-6-6M12 12l6-6M12 12l-6 6M12 12l6 6"/><path d="M12 12v9M9 21h6"/></svg></div></div><div class="bd" style="padding-top:34px"><b>De molens op de Kruisvest</b><br>Sint-Janshuismolen en Bonne Chieremolen, letterlijk naast de boot. Mooi bij zonsopkomst met koffie (of een pils).</div></div><div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Brugge_-_Kruispoort_2.jpg/1280px-Brugge_-_Kruispoort_2.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V8l2 1V6h2v3h2V6h4v3h2V6h2v3l2-1v13z"/><path d="M10 21v-5a2 2 0 0 1 4 0v5"/></svg></div></div><div class="bd" style="padding-top:34px"><b>Kruispoort</b><br>Middeleeuwse stadspoort, ~5 min lopen. Prima startpunt voor de wandeling langs de vesten.</div></div><div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Brugge_Jeruzalemkerk_R01.jpg/1280px-Brugge_Jeruzalemkerk_R01.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M10 4h4"/><path d="M6 21V11l6-5 6 5v10z"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/></svg></div></div><div class="bd" style="padding-top:34px"><b>Jeruzalemkerk & Kantcentrum</b><br>Bijzondere kerk uit de 15e eeuw in de Peperstraat, met kantkloswerk ernaast. ~8 min.</div></div><div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Brugge_Vlissinghe_R02.jpg/1280px-Brugge_Vlissinghe_R02.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg></div></div><div class="bd" style="padding-top:34px"><b>Café Vlissinghe</b><br>Een van de oudste cafés van Brugge (Blekersstraat). Bruin café, open haard, kaarten op tafel. ~15 min.</div></div><div class="card"><div class="bd"><div style="font-size:2em"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3c6 3 6 15 0 18"/><path d="M5 3v18"/><path d="M3 12h17M17 9l3 3-3 3"/></svg></div><b>Schuttersgilde Sint-Sebastiaan</b><br>Eeuwenoude handboogschutters in de Carmersstraat. ~10 min.</div></div><div class="card"><div class="bd"><div style="font-size:2em"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l5-4 5 4v10z"/><path d="M13 21V9l4-3 4 3v12z"/><path d="M7 21v-4h2v4"/></svg></div><b>Volkskundemuseum</b><br>Oud Brugs leven in godshuizen, met herbergje De Zwarte Kat. ~10 min.</div></div><div class="card"><div class="bd"><div style="font-size:2em"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></div><b>Avondwandeling langs de vesten</b><br>Park, molens en kanaal vanaf de boot. Ideaal om na een avond Brugs Beertje weer bij te komen.</div></div></div><h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg> Parkeren</h2><p>Betaald lossen op ~90 m van de boot. Gratis parking op ~1 km (exacte coördinaten volgen een week vooraf). Alternatief: gratis randparking Coiseaukaai (~10 min lopen).</p>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M10 2h4"/></svg> Looptijden vanaf de boot</h2><p>Fort Lapin ~15 · Cambrinus ~20 · Markt/De Garre ~22 · Brugs Beertje ~27 · Halve Maan ~33 · Cactus ~40 min</p>
+</div>
+<span class="calling">Take your time. — Operation Brugge</span><div class="credit">Foto's: Wikimedia Commons (vrije licenties)</div>
+<section id="nacht" class="ng-wrap"><h2>Nachtwandeling door Brugge</h2><p class="ng-sub">Loop en spring door nachtelijk Brugge, steek de lantaarns aan, ontwijk appelsap en melk en haal de biertap. Daar wacht je beloning.</p>
+<div class="ng" id="ng"><canvas id="ngC" aria-label="Platformspel nachtelijk Brugge"></canvas>
+<div class="ng-hud"><span>Level <b id="ngLv">1</b></span><span>Lantaarns <b id="ngS">0 / 0</b></span><span>Hartjes <b id="ngH">♥♥♥</b></span></div>
+<button type="button" class="qi ng-help" id="ngI" aria-expanded="false" aria-label="Zo speel je">?</button>
+<div class="ng-leg" id="ngLeg" hidden><h4>Zo speel je</h4><h5>Computer</h5><ul><li>Pijltjes ← → of A / D: lopen</li><li>Spatie, W of pijltje ↑: springen</li><li>Muis over het glas bewegen: bier tappen</li><li>Muisklik: menu en bonusvraag</li></ul><h5>Mobiel / iPhone</h5><ul><li>Knoppen onderin: links, rechts, springen</li><li>Veeg omhoog: springen · veeg links/rechts: lopen</li><li>Sleep je vinger over het glas: bier tappen</li><li>Tik: menu en bonusvraag</li></ul><p style="margin:.5rem 0 0;opacity:.8">Lantaarns aansteken = punten. Appelsap en melk kosten een hartje. Haal de biertap aan het eind!</p></div>
+<div class="ng-ctl" id="ngCtl"><div><button type="button" data-k="l" aria-label="Links">◀</button><button type="button" data-k="r" aria-label="Rechts">▶</button></div><div><button type="button" data-k="j" aria-label="Springen">▲</button></div></div>
+<div class="ng-pan" id="ngStart"><h3>Operation Brugge: de nachtwandeling</h3><p>Help het poppetje naar de biertap. Elk level groeit zijn buikje een beetje.</p><div class="ng-btns"><button type="button" class="ng-btn" id="ngGo">Start</button></div></div>
+<div class="bg" id="bg" hidden><div class="bg-t">Beweeg je muis of vinger over het glas om te tappen</div><div class="bg-glass" id="bgG"><div class="bg-fill" id="bgF"><div class="bg-foam"></div></div></div><div class="bg-p" id="bgP">0%</div><button type="button" class="bg-r" id="bgR" hidden>Verder</button></div>
+<div class="ng-pan" id="ngDone" hidden><h3 id="ngDT">PROOST! Level gehaald</h3><p id="ngDP"></p><div class="ng-btns"><button type="button" class="ng-btn" id="ngNext">Opnieuw spelen</button><button type="button" class="ng-btn" id="ngQ">Bonusvraag</button></div></div>
+<div class="ng-pan" id="ngQz" hidden><h3>Bonusvraag</h3><p id="ngQQ"></p><div class="ng-opts" id="ngQO"></div><div class="ng-fb" id="ngQF"></div><div class="ng-btns"><button type="button" class="ng-btn" id="ngQB" hidden>Terug</button></div></div>
+<div class="ng-pan" id="ngOver" hidden><h3>Te veel appelsap en melk!</h3><p>Bleh. Probeer dit level nog eens.</p><div class="ng-btns"><button type="button" class="ng-btn" id="ngRe">Opnieuw</button></div></div>
+</div></section><script>
+const T=new Date('2026-11-20T15:00:00+01:00');if(0)setInterval(()=>{let s=(T-new Date())/1e3;if(s<0){cd.textContent='Aan boord!';return}cd.textContent=`Nog ${Math.floor(s/86400)}d ${Math.floor(s%86400/3600)}u ${Math.floor(s%3600/60)}m tot inchecken`},1000);
+const K='tourkeuzes';function show(){const d=JSON.parse(localStorage.getItem(K)||'{}');sum.innerHTML='<h3>Keuzes</h3>'+(Object.entries(d).map(([w,v])=>`<p><b>${w}</b>: ${v.t}${v.r?' – '+v.r:''}</p>`).join('')||'<p>Nog niemand gekozen.</p>')}
+f.onsubmit=e=>{e.preventDefault();const t=document.querySelector('input[name=t]:checked');if(!t)return alert('Kies een tour');const d=JSON.parse(localStorage.getItem(K)||'{}');var kk=document.querySelector('input[name=k]:checked');d[who.value]={t:t.value,k:kk?kk.value:'',r:rem.value};localStorage.setItem(K,JSON.stringify(d));show()};show();
+document.querySelectorAll('.card,label.opt,.band,form,.wrap>h2,.wrap>p').forEach(e=>e.classList.add('rv'));const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+let swS=0,swE=0,swR=false,swRaf;const swF=n=>String(n).padStart(2,'0');function swTick(){const t=swE+(swR?performance.now()-swS:0);const s=t/1000;swT.textContent=`${swF(Math.floor(s/60))}:${swF(Math.floor(s%60))}.${swF(Math.floor(t%1000/10))}`;window.swHand&&(swHand.style.transform=`rotate(${(s%60)*6}deg)`);window.swArc&&(swArc.style.strokeDashoffset=276-276*((s%60)/60));if(swR)swRaf=requestAnimationFrame(swTick)}
+swGo.onclick=()=>{const w=document.querySelector('.sw');if(swR){swE+=performance.now()-swS;swR=false;swGo.textContent='Start';w.classList.remove('run');document.querySelector('.sw-beer').style.animationPlayState='paused'}else{swS=performance.now();swR=true;swGo.textContent='Stop';w.classList.add('run');document.querySelector('.sw-beer').style.animationPlayState='running';swTick()}};
+swRs.onclick=()=>{swR=false;swE=0;cancelAnimationFrame(swRaf);swGo.textContent='Start';document.querySelector('.sw').classList.remove('run');swTick()};
+document.querySelectorAll('.chips a').forEach(a=>a.onclick=()=>{const r=document.querySelector(`input[name=t][value="${a.dataset.t}"]`);if(r)r.checked=true});
+const PK='pollAfzakken';function pr(){const d=JSON.parse(localStorage.getItem(PK)||'{"garre":0,"beertje":0,"mine":""}');['garre','beertje'].forEach(k=>{var e=document.getElementById('pv-'+k);if(e)e.textContent=d[k]+(d[k]==1?' stem':' stemmen')});document.querySelectorAll('.pv').forEach(b=>b.classList.toggle('mine',b.dataset.v===d.mine));return d}
+document.querySelectorAll('.pv').forEach(b=>b.onclick=()=>{const d=pr();if(d.mine)d[d.mine]--;if(d.mine===b.dataset.v){d.mine=''}else{d[b.dataset.v]++;d.mine=b.dataset.v}localStorage.setItem(PK,JSON.stringify(d));pr()});pr();
+
+;(function(){var T=new Date(2026,10,21,18,0,0).getTime(),t=document.getElementById('swT'),a=document.getElementById('swArc'),hd=document.getElementById('swHand');if(!t)return;
+function p(n){return String(n).padStart(2,'0')}
+function f(){var d=Math.max(0,T-Date.now()),s=Math.floor(d/1000),D=Math.floor(s/86400),H=Math.floor(s%86400/3600),M=Math.floor(s%3600/60),S=s%60;
+t.textContent=d?(D?D+'d ':'')+p(H)+':'+p(M)+':'+p(S):'PROOST!';
+
+}
+f();setInterval(f,1000);})();
+
+;(function(){var I={
+"Legends privétour":["Privé stadswandeling langs de legendes en verhalen van Brugge, met eigen gids.","€195 totaal voor de groep, dus rond €49 p.p. met z'n vieren.","Ongeveer 2 uur, starttijd zelf kiezen.","Top als je verhalen wilt horen in het Nederlands, zonder vreemden erbij."],
+"Storytelling Tour":["Wandeltour met verhalen en anekdotes, start bij het Belfort.","Kleine boekingsfee plus fooi naar keuze.","2 tot 3 uur, tijden nog niet bevestigd.","Leuk en luchtig, wel in het Engels."],
+"GuruWalk":["Gratis wandeltour langs de bekende plekken, je betaalt na afloop wat je wilt.","Fooi naar keuze.","Rond 1,5 uur, ochtend past (14:00 botst met Fort Lapin).","Goedkoop en makkelijk, wel in het Engels en met een grotere groep."],
+"Dark Side of Bruges":["Avondtour langs de duistere kant: moorden, heksen en spookverhalen.","Fooi-gebaseerd.","1,5 uur, start 18:00 of 20:00.","Sfeervol in het donker, en er zit een gratis bier bij. Waarschijnlijk de favoriet."],
+"garre":["Piepklein café in een steegje bij de Markt, bekend om de eigen Garre-tripel.","Gewone café-prijzen.","Zo lang als je wilt, één tripel is wel sterk.","Echt Brugs en gezellig, maar vol is vol."],
+"beertje":["Klein bruin bierkroegje met een enorme bierkaart vol Belgische bieren.","Gewone café-prijzen.","Zo lang als je wilt.","Perfect als je veel verschillende bieren wilt proeven."]};
+function mk(key,host,after){var d=I[key];if(!d)return;var b=document.createElement('button');b.type='button';b.className='qi';b.textContent='?';b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Meer info');
+var x=document.createElement('div');x.className='qbox';x.innerHTML='<b>Wat:</b> '+d[0]+'<br><b>Kost:</b> '+d[1]+'<br><b>Duur:</b> '+d[2]+'<br><b>Iets voor ons?</b> '+d[3];
+b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var o=x.classList.toggle('on');b.setAttribute('aria-expanded',o)});
+x.addEventListener('click',function(e){e.preventDefault();e.stopPropagation()});
+after.insertAdjacentElement('afterend',b);host.appendChild(x);}
+document.querySelectorAll('label.opt input[name=t],label.opt input[name=k]').forEach(function(i){var l=i.closest('label'),bb=l.querySelector('b');if(bb)mk(i.value,l,bb)});
+document.querySelectorAll('.pv').forEach(function(p){var w=document.createElement('span');w.style.display='inline-block';p.parentNode.insertBefore(w,p);w.appendChild(p);mk(p.dataset.v,w,p)});
+})();
+
+;(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var R='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg>';
+var B='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/></svg>';
+var C=['#e7b45a','#f0c674','#fff3d6','#e60012','#c8892f'],busy=0;
+function el(c,x,y){var d=document.createElement('div');d.className='fx '+c;d.style.left=x+'px';d.style.top=y+'px';document.body.appendChild(d);return d}
+document.addEventListener('click',function(e){var t=e.target.closest('button,a,label.opt,.pv,.qi,.chip,.card');if(!t||busy>4)return;busy++;
+var x=e.clientX,y=e.clientY,big=t.matches('.pv,label.opt,.chip,#swGo');
+if(big){var r=el('fx-r',x,y);r.innerHTML=R;setTimeout(function(){r.innerHTML=B;r.classList.add('fx-b');var ry=y-52;burst(x,ry,14);setTimeout(function(){r.remove()},460)},480)}
+else burst(x,y,8);
+setTimeout(function(){busy--},900)});
+function burst(x,y,n){for(var i=0;i<n;i++){var s=el('fx-s'+(i%3?'':' st'),x,y),a=Math.PI*2*i/n+Math.random()*.5,d=22+Math.random()*30;
+s.style.background=C[i%C.length];s.style.setProperty('--dx',Math.cos(a)*d+'px');s.style.setProperty('--dy',Math.sin(a)*d+'px');setTimeout(s.remove.bind(s),720)}}
+})();
+
+;(function(){var T=new Date(2026,10,21,18,0,0).getTime(),H=document.getElementById('dkH'),M=document.getElementById('dkM'),S=document.getElementById('dkS');if(!S)return;var last=-1,turns=0;
+function f(){var s=Math.floor(Math.max(0,T-Date.now())/1000),sec=s%60,min=Math.floor(s/60)%60,hr=Math.floor(s/3600)%12;
+if(last===0&&sec===59)turns--;last=sec;
+S.style.transform='rotate('+(sec*6+turns*360)+'deg)';M.style.transform='rotate('+(min*6+sec*.1)+'deg)';H.style.transform='rotate('+(hr*30+min*.5)+'deg)';}
+f();setInterval(f,1000);})();
+
+;(function(){var T=new Date(2026,10,21,18,0,0).getTime(),root=document.getElementById('fc');if(!root)return;var cdh=document.getElementById('cd');if(cdh){cdh.textContent='';cdh.appendChild(root);var lb=document.createElement('div');lb.className='fcl';lb.textContent='tot het eerste gratis bier, zaterdag 18:00';cdh.appendChild(lb)}
+var groups=[['uren',3],['min',2],['sec',2]],cells=[];
+groups.forEach(function(g,gi){if(gi){var s=document.createElement('div');s.className='fsep';s.textContent=':';root.appendChild(s)}
+var w=document.createElement('div');w.className='fg';var ds=document.createElement('div');ds.className='fds';
+for(var i=0;i<g[1];i++){var d=document.createElement('div');d.className='fd';d.innerHTML='<div class="fh t"><span>0</span></div><div class="fh b"><span>0</span></div>';ds.appendChild(d);cells.push({el:d,v:'0'})}
+w.appendChild(ds);var l=document.createElement('small');l.textContent=g[0];w.appendChild(l);root.appendChild(w)});
+function set(c,n){if(c.v===n)return;var o=c.v;c.v=n;var t=c.el.querySelector('.fh.t span'),b=c.el.querySelector('.fh.b span');
+var old=c.el.querySelector('.ff');if(old)old.remove();
+var f=document.createElement('div');f.className='ff';f.innerHTML='<div class="fh b"><span>'+o+'</span></div><div class="fh bk"><span>'+n+'</span></div>';
+b.textContent=n;c.el.appendChild(f);void f.offsetWidth;f.classList.add('go');
+setTimeout(function(){t.textContent=n;f.remove()},500)}
+function p(n,l){n=String(n);while(n.length<l)n='0'+n;return n}
+function tick(){var s=Math.floor(Math.max(0,T-Date.now())/1000),str=p(Math.min(999,Math.floor(s/3600)),3)+p(Math.floor(s/60)%60,2)+p(s%60,2);
+for(var i=0;i<cells.length;i++)set(cells[i],str[i])}
+tick();setInterval(tick,1000);})();
+
+;(function(){var MAIL='bzijffers@gmail.com',REPO='https://github.com/brennyz/OperationBrugge/issues/new';
+var MAP={"Legends privétour":"Legends Tours privétour (NL, eigen starttijd, €195 totaal)","Storytelling Tour":"Storytelling Tour via Viator (EN, fooi)","GuruWalk":"GuruWalk gratis wandeltour (ochtend)","Dark Side of Bruges":"Dark Side of Bruges avondtour (18:00 of 20:00)"};
+function mail(s,b){location.href='mailto:'+MAIL+'?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)}
+var f=document.getElementById('f'),who=document.getElementById('who'),rem=document.getElementById('rem');
+if(f)f.addEventListener('submit',function(){var t=document.querySelector('input[name=t]:checked');if(!t)return;
+setTimeout(function(){var kk=document.querySelector('input[name=k]:checked');mail('Operation Brugge: keuzes '+who.value,who.value+' kiest:\nTour: '+t.value+'\nVrijdagavond: '+(kk?(kk.value==='garre'?'De Garre':'Brugs Beertje'):'geen voorkeur')+(rem.value?'\nOpmerking: '+rem.value:''))},300)});
+
+var g=document.getElementById('ghb');if(g)g.addEventListener('click',function(){var t=document.querySelector('input[name=t]:checked');
+var u=REPO+'?template=tourkeuze.yml&title='+encodeURIComponent('Tourkeuze '+who.value)+'&wie='+encodeURIComponent(who.value)+(t?'&tour='+encodeURIComponent(MAP[t.value]||t.value):'')+(function(){var kk=document.querySelector('input[name=k]:checked');return kk?'&kroeg='+encodeURIComponent(kk.value==='garre'?'De Garre':'Brugs Beertje'):''})()+(rem.value?'&opmerking='+encodeURIComponent(rem.value):'');window.open(u,'_blank')});
+})();
+
+;(function(){var NG=document.getElementById('ng'),C=document.getElementById('ngC');if(!NG||!C)return;var X=C.getContext('2d');
+var Q=[
+['Van welke provincie is Brugge de hoofdstad?','West-Vlaanderen',['Oost-Vlaanderen','Antwerpen','Limburg']],
+['Hoe groot is het eivormige historische centrum ongeveer?','430 hectare',['120 hectare','1.075 hectare','2.500 hectare']],
+['Hoeveel inwoners telt Brugge ongeveer?','120.000',['46.000','250.000','20.000']],
+['Hoe worden de inwoners van Brugge genoemd?','Bruggelingen',['Bruggenaren','Bruggers','Brugsen']],
+['Welke bijnaam krijgt Brugge vanwege de vele waterlopen en bruggen?','Venetië van het Noorden',['Amsterdam van het Zuiden','Parel van de Noordzee','Stad der Torens']],
+['Naar wie verwijst de bijnaam "Breydelstad"?','Jan Breydel',['Pieter de Coninck','Guido Gezelle','Karel de Goede']],
+['Wat is de bijnaam van de Bruggelingen?','(Brugse) zotten',['Brugse beren','Brugse paters','Brugse kletskoppen']],
+['Volgens de legende zei wie: "Sluit alle poorten van Brugge en je hebt een zothuis"?','Maximiliaan I van Oostenrijk',['Karel V','Filips de Goede','Napoleon']],
+['Het Keltische woord "Rogia", waar de Reie van komt, betekent...','Heilig Water',['Snelle rivier','Brug','Zwart water']],
+['Wat betekent het Oudnoordse woord "bryggja"?','Landingsbrug of aanlegkaai',['Stadsmuur','Marktplein','Vissersboot']],
+['In welk jaar ontstond het Zwin, de vaargeul tussen Brugge en de zee?','1134',['1089','1302','1482']],
+['In welk jaar werd Brugge uitgeroepen tot hoofdstad van het graafschap Vlaanderen?','1089',['1134','1280','1384']],
+['Welk gebouw zag volgens het artikel als eerste ter wereld het levenslicht in Brugge?','Het beursgebouw',['De bank','Het postkantoor','Het ziekenhuis']],
+['Welke periode wordt het gouden tijdperk van Brugge genoemd?','Ca. 1280 tot 1480',['Ca. 1100 tot 1250','Ca. 1500 tot 1650','Ca. 1700 tot 1850']],
+['Hoeveel inwoners telde Brugge in zijn gouden tijdperk?','46.000',['12.000','100.000','200.000']],
+['Wiens dood in 1482 betekende een keerpunt voor Brugge?','Maria van Bourgondië',['Isabella van Portugal','Margaretha van Oostenrijk','Johanna van Constantinopel']],
+['Welke stad nam daarna een eeuw lang de rol van handelsmetropool over?','Antwerpen',['Gent','Brussel','Amsterdam']],
+['Door wie werd Brugge in 1584 ingenomen?','De hertog van Parma',['De hertog van Alva','Willem van Oranje','Lodewijk XIV']],
+['Wie schreef de roman "Bruges-la-Morte"?','Georges Rodenbach',['Victor Hugo','Emile Verhaeren','Hendrik Conscience']],
+['In welk jaar werd de zeehaven in Zeebrugge gebouwd?','1896',['1830','1902','1971']],
+['De tentoonstelling van welke schilders was in 1902 het startschot voor het toerisme?','De Vlaamse Primitieven',['De impressionisten','De surrealisten','De Hollandse meesters']],
+['In welk jaar kwam de binnenstad op de Werelderfgoedlijst van UNESCO?','2000',['1971','1985','2002']],
+['In welk jaar was Brugge culturele hoofdstad van Europa?','2002',['2000','1998','2010']],
+['Hoeveel deelgemeenten heeft Brugge?','Acht',['Vijf','Tien','Twaalf']],
+['Op hoeveel kilometer van de Noordzee ligt Brugge ongeveer?','15 km',['5 km','40 km','60 km']],
+['Rond welke temperatuur schommelt het in Brugge in de winter?','2 °C',['-6 °C','8 °C','12 °C']],
+['Hoe hoog is de bakstenen toren van de Onze-Lieve-Vrouwekerk?','115,6 meter',['83 meter','98 meter','142 meter']],
+['Wiens praalgraven staan in de Onze-Lieve-Vrouwekerk?','Karel de Stoute en Maria van Bourgondië',['Filips de Goede en Isabella','Karel V en Isabella','Jan Breydel en Pieter de Coninck']],
+['In welke kerk, waarvan de fundamenten op de Burg liggen, werd Karel de Goede vermoord?','Sint-Donaaskathedraal',['Sint-Salvatorskathedraal','Onze-Lieve-Vrouwekerk','Sint-Walburgakerk']],
+['Wat is de officiële stadspraline van Brugge?','Het Brugsch Swaentje',['Het Brugs Beertje','De Brugse Zot','De Brugse kletskop']],
+['Hoeveel horecazaken telt de Brugse binnenstad?','Meer dan 500',['Ongeveer 100','Ongeveer 50','Meer dan 3.000']],
+['Hoeveel zitplaatsen heeft de grote concertzaal van het Concertgebouw ongeveer?','1.300',['320','700','3.000']],
+['Het Gezellehuis is het geboortehuis van welke dichter?','Guido Gezelle',['Georges Rodenbach','Paul van Ostaijen','Hugo Claus']],
+['In welke eeuw werd de Sint-Salvatorskathedraal gesticht?','9e eeuw',['12e eeuw','15e eeuw','17e eeuw']],
+['Waar worden de kazen gemaakt die naar Brugge genoemd zijn (zoals Brugge Oud)?','Moorslede',['Brugge','Damme','Gent']],
+['Uit welke eeuw stammen de eerste tekenen van leven, een Gallo-Romeinse nederzetting?','2e eeuw n.C.',['5e eeuw v.C.','7e eeuw n.C.','10e eeuw n.C.']],
+['Welk bier hoort volgens het artikel bij Brugge en deelt zijn naam met een kroeg in jullie poll?','De Garre Tripel',['Westmalle Tripel','Duvel','Leffe Blond']]
+];
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.random()*(i+1)|0,t=a[i];a[i]=a[j];a[j]=t}return a}
+var deck=[];function nextQ(){if(!deck.length)deck=shuf(Q);return deck.pop()}
+var $=function(i){return document.getElementById(i)};
+var AC;function ac(){if(!AC){var K=window.AudioContext||window.webkitAudioContext;if(K)AC=new K()}if(AC&&AC.state==='suspended')AC.resume();return AC}
+function unlock(){var a=ac();if(a){var b=a.createBuffer(1,1,22050),s=a.createBufferSource();s.buffer=b;s.connect(a.destination);s.start(0)}}
+NG.addEventListener('touchend',unlock,{passive:true});NG.addEventListener('pointerdown',unlock);
+function crackle(){var a=ac();if(!a)return;var len=a.sampleRate*.35|0,b=a.createBuffer(1,len,a.sampleRate),d=b.getChannelData(0);for(var i=0;i<len;i++)d[i]=(Math.random()<.04?(Math.random()*2-1):(Math.random()*2-1)*.08)*Math.pow(1-i/len,2);var s=a.createBufferSource(),f=a.createBiquadFilter(),g=a.createGain();s.buffer=b;f.type='bandpass';f.frequency.value=2500;g.gain.value=.35;s.connect(f);f.connect(g);g.connect(a.destination);s.start()}
+function tone(f1,f2,dur,type,vol){var a=ac();if(!a)return;var o=a.createOscillator(),g=a.createGain(),t=a.currentTime;o.type=type;o.frequency.setValueAtTime(f1,t);o.frequency.exponentialRampToValueAtTime(f2,t+dur*.8);g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.001,t+dur);o.connect(g);g.connect(a.destination);o.start(t);o.stop(t+dur+.02)}
+function plop(p){tone(500+p*3,140,.12,'sine',.25)}
+function bleh(){var a=ac();if(!a)return;var o=a.createOscillator(),f=a.createBiquadFilter(),g=a.createGain(),t=a.currentTime;o.type='sawtooth';o.frequency.setValueAtTime(220,t);o.frequency.linearRampToValueAtTime(150,t+.35);f.type='lowpass';f.frequency.value=700;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.16,t+.04);g.gain.exponentialRampToValueAtTime(.001,t+.4);o.connect(f);f.connect(g);g.connect(a.destination);o.start(t);o.stop(t+.42)}
+function jumpS(){tone(300,520,.12,'triangle',.08)}
+/* canvas */
+var VW=640,VH=360,sc=1;function fit(){var w=NG.clientWidth,h=NG.clientHeight,d=window.devicePixelRatio||1;C.width=Math.round(w*d);C.height=Math.round(h*d);sc=C.width/VW;VH=C.height/sc}
+fit();window.addEventListener('resize',fit);if(window.ResizeObserver)new ResizeObserver(fit).observe(NG);
+/* state */
+var lv=1,belly=4,bellyT=4,hearts=3,state='menu',P,lev,cam=0,keys={},stars=[],sky=[],parts=[],shake=0;
+for(var i=0;i<70;i++)stars.push([Math.random()*2000,Math.random()*170,Math.random()*1.4+.3]);
+(function(){var x=0;while(x<2600){var w=30+Math.random()*50,h=50+Math.random()*90;sky.push([x,w,h,Math.random()<.5]);x+=w+Math.random()*8}})();
+function rnd(s){return function(){s=(s*9301+49297)%233280;return s/233280}}
+var GY=300;
+function build(){var r=rnd(lv*77+3),L=1800+lv*450,g=[],pl=[],la=[],en=[],x=0;
+g.push([0,380]);x=380;
+while(x<L){var gap=lv>1&&r()<.55?50+r()*(30+Math.min(lv,5)*6):0;x+=gap;var w=180+r()*220;g.push([x,w]);
+if(r()<.6){var pw=70+r()*70,px=x+20+r()*(w-pw-20),py=GY-70-(r()<.4?50:0);pl.push([px,py,pw]);la.push({x:px+pw/2,y:py,on:0,fl:0})}
+la.push({x:x+w*(.3+r()*.4),y:GY,on:0,fl:0});
+if(x>500&&r()<.45+lv*.06){var k=Math.min(lv,4);for(var e=0;e<(r()<.25*k?2:1);e++)en.push({x:x+40+r()*(w-80),a:x+10,b:x+w-10,v:(30+lv*10)*(r()<.5?1:-1),t:r()<.5?'m':'a',dead:0})}
+x+=w}
+var tap=x+60;g.push([x,500]);
+lev={g:g,pl:pl,la:la,en:en,tap:tap,end:x+500};$('ngS').textContent='0 / '+la.length}
+function reset(){P={x:60,y:GY,vx:0,vy:0,on:1,inv:0,face:1,walk:0,cx:60};hearts=3;hud();cam=0;parts=[]}
+function hud(){$('ngLv').textContent=lv;$('ngH').textContent='♥♥♥'.slice(0,hearts)+'♡♡♡'.slice(0,3-hearts);var n=0;lev.la.forEach(function(l){n+=l.on});$('ngS').textContent=n+' / '+lev.la.length}
+function startLevel(){build();reset();state='play';hide()}
+function hide(){['ngStart','ngDone','ngQz','ngOver'].forEach(function(i){$(i).hidden=true});$('bg').hidden=true}
+function ground(x){for(var i=0;i<lev.g.length;i++){var s=lev.g[i];if(x>=s[0]-4&&x<=s[0]+s[1]+4)return 1}return 0}
+function hurt(dir){if(P.inv>0)return;hearts--;P.inv=1.4;P.vx=-dir*260;P.vy=-300;P.on=0;shake=.3;bleh();burst(P.x,P.y-30,'#f4ecdc',10);hud();if(hearts<=0){state='over';setTimeout(function(){$('ngOver').hidden=false},500)}}
+function burst(x,y,c,n){for(var i=0;i<n;i++){var a=Math.random()*6.28,s=60+Math.random()*140;parts.push({x:x,y:y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-60,t:.7,c:c})}}
+var swipe=0;
+function upd(dt){var L=keys.l||swipe<0,R=keys.r||swipe>0,acc=1100,max=170;if(swipe)swipe+=swipe>0?-dt:dt,Math.abs(swipe)<.02&&(swipe=0);
+if(L){P.vx=Math.max(P.vx-acc*dt,-max);P.face=-1}else if(R){P.vx=Math.min(P.vx+acc*dt,max);P.face=1}else P.vx*=Math.pow(.0005,dt);
+if(keys.j&&P.on){P.vy=-560;P.on=0;jumpS();keys.jq=0}if(keys.jq&&!keys.j)keys.j=0;
+P.vy+=1500*dt;var py=P.y;P.x+=P.vx*dt;P.y+=P.vy*dt;if(P.x<10){P.x=10;P.vx=0}
+P.on=0;if(P.vy>=0){lev.pl.forEach(function(p){if(P.x>p[0]-6&&P.x<p[0]+p[2]+6&&py<=p[1]+1&&P.y>=p[1]){P.y=p[1];P.vy=0;P.on=1}});
+if(!P.on&&py<=GY+1&&P.y>=GY&&ground(P.x)){P.y=GY;P.vy=0;P.on=1}}
+if(P.on&&P.y===GY)P.cx=P.x;
+if(P.y>VH+60){hearts--;bleh();hud();if(hearts<=0){state='over';$('ngOver').hidden=false;return}var cx=P.cx;P.x=cx;P.y=GY-40;P.vx=0;P.vy=0;P.inv=1.2}
+P.inv=Math.max(0,P.inv-dt);P.walk+=Math.abs(P.vx)*dt*.08;
+lev.la.forEach(function(l){if(!l.on&&Math.abs(l.x-P.x)<18&&P.y>l.y-80&&P.y<=l.y+2){l.on=1;l.fl=.6;crackle();burst(l.x,l.y-58,'#f0c674',12);hud()}l.fl=Math.max(0,l.fl-dt)});
+lev.en.forEach(function(e){if(e.dead)return;e.x+=e.v*dt;if(e.x<e.a||e.x>e.b)e.v=-e.v;
+if(Math.abs(e.x-P.x)<18&&P.y>GY-26&&P.y-44<GY){if(P.vy>80&&P.y<GY-10){e.dead=1;P.vy=-380;bleh();burst(e.x,GY-14,e.t=='m'?'#ffffff':'#e8b23a',14)}else hurt(e.x>P.x?1:-1)}});
+parts.forEach(function(p){p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=400*dt;p.t-=dt});parts=parts.filter(function(p){return p.t>0});
+cam+=((P.x-VW*.35)-cam)*Math.min(1,dt*6);cam=Math.max(0,Math.min(cam,lev.end-VW));
+if(P.x>=lev.tap-14){state='pour';P.vx=0;openPour()}}
+function lamp(l){var x=l.x-cam,y=l.y;X.fillStyle='#2a1d14';X.fillRect(x-1.5,y-50,3,50);X.fillStyle=l.on?'#e7b45a':'#1d140d';X.strokeStyle='#4a2e18';X.lineWidth=2;X.beginPath();X.rect(x-8,y-66,16,18);X.fill();X.stroke();
+if(l.on){var g=X.createRadialGradient(x,y-57,2,x,y-57,60);g.addColorStop(0,'rgba(240,198,116,.55)');g.addColorStop(1,'rgba(240,198,116,0)');X.fillStyle=g;X.fillRect(x-60,y-117,120,120)}
+if(l.fl){X.fillStyle='rgba(255,243,214,'+l.fl+')';X.beginPath();X.arc(x,y-57,(0.6-l.fl)*120+6,0,6.28);X.fill()}}
+function guy(){var x=P.x-cam,y=P.y,b=belly,w=Math.sin(P.walk)*(P.on&&Math.abs(P.vx)>10?9:0);if(P.inv>0&&((P.inv*12)|0)%2)X.globalAlpha=.4;
+X.strokeStyle='#f4ecdc';X.lineWidth=3;X.lineCap='round';X.beginPath();
+X.moveTo(x,y-20);X.lineTo(x-6-w*.5,y);X.moveTo(x,y-20);X.lineTo(x+6+w*.5,y);
+X.moveTo(x,y-20);X.lineTo(x,y-40);X.moveTo(x,y-36);X.lineTo(x-10-w*.3,y-26+(P.on?0:-10));X.moveTo(x,y-36);X.lineTo(x+10+w*.3,y-26+(P.on?0:-10));X.stroke();
+X.fillStyle='#4a2e18';X.strokeStyle='#e7b45a';X.lineWidth=2;X.beginPath();X.ellipse(x+P.face*b*.35,y-28,b*.6+3,b*.5+5,0,0,6.28);X.fill();X.stroke();
+X.fillStyle='#f4ecdc';X.beginPath();X.arc(x,y-47,7,0,6.28);X.fill();X.fillStyle='#2a1d14';X.fillRect(x+P.face*3-1,y-49,2,2);X.globalAlpha=1}
+function draw(){var W=C.width;X.setTransform(1,0,0,1,0,0);var sx=shake>0?(Math.random()-.5)*8*sc:0;X.setTransform(sc,0,0,sc,sx,0);
+var gr=X.createLinearGradient(0,0,0,VH);gr.addColorStop(0,'#0b0705');gr.addColorStop(1,'#3a2614');X.fillStyle=gr;X.fillRect(0,0,VW,VH);
+X.fillStyle='#f4ecdc';stars.forEach(function(s){var x=((s[0]-cam*.1)%2000+2000)%2000;if(x<VW)X.fillRect(x,s[1],s[2],s[2])});
+X.fillStyle='#f0c674';X.beginPath();X.arc(540-cam*.05%700,60,22,0,6.28);X.fill();
+X.fillStyle='#160e09';sky.forEach(function(b){var x=b[0]-(cam*.4)%2600;if(x<-80)x+=2600;if(x>VW)return;var top=GY-b[2];X.beginPath();X.moveTo(x,GY);X.lineTo(x,top);if(b[3]){X.lineTo(x+b[1]/2,top-18);X.lineTo(x+b[1],top)}else{for(var s=0;s<3;s++){X.lineTo(x+b[1]*s/3,top-8);X.lineTo(x+b[1]*(s+1)/3,top-8);X.lineTo(x+b[1]*(s+1)/3,top)}}X.lineTo(x+b[1],GY);X.fill()});
+var bx=900-cam*.4;X.fillRect(bx,GY-200,40,200);X.fillRect(bx+8,GY-240,24,40);
+X.fillStyle='#1b2a33';X.fillRect(0,GY+6,VW,VH-GY);
+lev.g.forEach(function(s){var x=s[0]-cam;if(x>VW||x+s[1]<0)return;X.fillStyle='#4a2e18';X.fillRect(x,GY,s[1],VH-GY);X.fillStyle='#e7b45a';X.fillRect(x,GY,s[1],2);X.fillStyle='rgba(0,0,0,.25)';for(var yy=GY+10;yy<VH;yy+=12)for(var xx=(yy/12%2)*12;xx<s[1];xx+=24)X.fillRect(x+xx,yy,22,1)});
+lev.pl.forEach(function(p){var x=p[0]-cam;X.fillStyle='#2a1d14';X.fillRect(x,p[1],p[2],10);X.fillStyle='#e60012';X.fillRect(x,p[1],p[2],2);X.fillStyle='#1d140d';X.fillRect(x+6,p[1]+10,4,GY-p[1]-10);X.fillRect(x+p[2]-10,p[1]+10,4,GY-p[1]-10)});
+lev.la.forEach(lamp);
+X.textAlign='center';lev.en.forEach(function(e){if(e.dead)return;var x=e.x-cam,bob=Math.sin(performance.now()/200+e.x)*2;X.font='26px sans-serif';X.fillText(e.t=='m'?'🥛':'🧃',x,GY-6+bob);X.font='9px Archivo,sans-serif';X.fillStyle='#f4ecdc';X.fillText(e.t=='m'?'melk':'appelsap',x,GY-34+bob)});
+var tx=lev.tap-cam;X.fillStyle='#2a1d14';X.fillRect(tx-6,GY-70,12,70);X.fillStyle='#e7b45a';X.fillRect(tx-16,GY-80,32,12);X.fillRect(tx+8,GY-70,10,4);X.font='30px sans-serif';X.fillText('🍺',tx,GY-90);X.font='11px "Bebas Neue",sans-serif';X.fillStyle='#f0c674';X.fillText('BIERTAP',tx,GY-122);
+guy();parts.forEach(function(p){X.globalAlpha=Math.max(0,p.t/.7);X.fillStyle=p.c;X.fillRect(p.x-cam,p.y,3,3)});X.globalAlpha=1}
+var last=0;function loop(t){var dt=Math.min(.033,(t-last)/1000||0);last=t;belly+=(bellyT-belly)*Math.min(1,dt*2);shake=Math.max(0,shake-dt);if(state==='play'&&!document.hidden)upd(dt);if(lev)draw();requestAnimationFrame(loop)}
+build();reset();requestAnimationFrame(loop);
+/* input */
+var KM={ArrowLeft:'l',KeyA:'l',ArrowRight:'r',KeyD:'r',ArrowUp:'j',KeyW:'j',Space:'j'};
+window.addEventListener('keydown',function(e){var k=KM[e.code];if(!k||state!=='play')return;var r=NG.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;e.preventDefault();keys[k]=1});
+window.addEventListener('keyup',function(e){var k=KM[e.code];if(k)keys[k]=0});
+$('ngCtl').querySelectorAll('button').forEach(function(b){var k=b.dataset.k;function dn(e){e.preventDefault();unlock();keys[k]=1;b.classList.add('dn')}function up(e){e.preventDefault();keys[k]=0;b.classList.remove('dn')}
+b.addEventListener('pointerdown',dn);b.addEventListener('pointerup',up);b.addEventListener('pointercancel',up);b.addEventListener('pointerleave',up);b.addEventListener('contextmenu',function(e){e.preventDefault()})});
+var ts=null;C.addEventListener('touchstart',function(e){var t=e.changedTouches[0];ts=[t.clientX,t.clientY]},{passive:true});
+C.addEventListener('touchend',function(e){if(!ts||state!=='play')return;var t=e.changedTouches[0],dx=t.clientX-ts[0],dy=t.clientY-ts[1];ts=null;if(Math.abs(dy)>30&&dy<0&&Math.abs(dy)>Math.abs(dx)){if(P.on){P.vy=-560;P.on=0;jumpS()}}else if(Math.abs(dx)>30)swipe=dx>0?.45:-.45});
+NG.addEventListener('touchmove',function(e){if(!e.target.closest('.ng-leg,.ng-pan'))e.preventDefault()},{passive:false});
+NG.addEventListener('click',function(e){e.stopPropagation()});
+$('ngI').addEventListener('click',function(){var L=$('ngLeg'),o=L.hidden;L.hidden=!o;this.setAttribute('aria-expanded',o)});
+$('ngGo').addEventListener('click',startLevel);$('ngRe').addEventListener('click',startLevel);
+/* pour */
+var BG=$('bg'),G=$('bgG'),F=$('bgF'),PP=$('bgP'),R=$('bgR'),fill=0,lx=null,ly=null,nx=4,done=false,obs=[],ot=0,need=100;
+function openPour(){fill=0;nx=4;done=false;lx=ly=null;obs.forEach(function(o){o.el.remove()});obs=[];ot=1;F.style.height='0';F.querySelector('.bg-foam').style.opacity=0;PP.textContent='0%';G.style.boxShadow='none';R.hidden=true;BG.hidden=false;requestAnimationFrame(pourLoop)}
+function setFill(){F.style.height=fill+'%';PP.textContent=Math.floor(fill)+'%';G.style.boxShadow='0 0 '+(fill*.4)+'px '+(fill*.12)+'px rgba(231,180,90,'+(fill/140)+')'}
+var pl2=0;function pourLoop(t){if(BG.hidden||done)return;var dt=Math.min(.05,(t-pl2)/1000||0);pl2=t;ot-=dt;
+if(ot<=0){ot=Math.max(.7,2.2-lv*.2);var el=document.createElement('div'),m=Math.random()<.5,r=BG.getBoundingClientRect(),gr=G.getBoundingClientRect();el.textContent=m?'🥛':'🧃';el.title=m?'melk':'appelsap';el.style.cssText='position:absolute;font-size:30px;pointer-events:none;transition:transform .2s;filter:drop-shadow(0 0 4px rgba(0,0,0,.6))';var dir=Math.random()<.5?1:-1;BG.appendChild(el);obs.push({el:el,x:dir>0?-40:r.width,y:gr.top-r.top+Math.random()*(gr.height-30),v:dir*(60+lv*15),hit:0})}
+var r=BG.getBoundingClientRect();obs.forEach(function(o){o.x+=o.v*dt;o.el.style.left=o.x+'px';o.el.style.top=o.y+'px'});obs=obs.filter(function(o){if(o.x<-60||o.x>r.width+20){o.el.remove();return false}return true});requestAnimationFrame(pourLoop)}
+function pmv(cx,cy){if(done||BG.hidden)return;var r=BG.getBoundingClientRect();for(var i=0;i<obs.length;i++){var o=obs[i];if(!o.hit&&Math.abs(cx-r.left-o.x-15)<22&&Math.abs(cy-r.top-o.y-18)<22){o.hit=1;o.el.style.transform='scale(1.6) rotate(20deg)';o.el.style.opacity='.4';fill=Math.max(0,fill-15);nx=Math.floor(fill/4)*4+4;bleh();setFill();G.style.outline='2px solid #e60012';setTimeout(function(){G.style.outline=''},250);lx=null;return}}
+var g=G.getBoundingClientRect();if(cx<g.left||cx>g.right||cy<g.top||cy>g.bottom){lx=ly=null;return}
+if(lx!==null)fill=Math.min(need,fill+Math.hypot(cx-lx,cy-ly)/(22+lv*3));lx=cx;ly=cy;setFill();if(fill>=nx){plop(fill);nx+=4}
+if(fill>=need){done=true;F.querySelector('.bg-foam').style.opacity=1;PP.textContent='PROOST!';R.hidden=false;obs.forEach(function(o){o.el.remove()});obs=[];burst(P.x,P.y-40,'#f0c674',30)}}
+BG.addEventListener('pointermove',function(e){pmv(e.clientX,e.clientY)});
+BG.addEventListener('touchmove',function(e){var t=e.touches[0];if(t)pmv(t.clientX,t.clientY)},{passive:true});
+BG.addEventListener('pointerleave',function(){lx=ly=null});
+R.addEventListener('click',function(){BG.hidden=true;var n=0;lev.la.forEach(function(l){n+=l.on});bellyT+=4;state='done';$('ngDT').textContent='PROOST! Level '+lv+' gehaald';$('ngDP').textContent=n+' van de '+lev.la.length+' lantaarns aangestoken. Het buikje groeit een maatje. Volgende level wordt iets langer.';$('ngNext').textContent='Opnieuw spelen (level '+(lv+1)+')';$('ngDone').hidden=false});
+$('ngNext').addEventListener('click',function(){lv++;startLevel()});
+/* quiz */
+$('ngQ').addEventListener('click',function(){var q=nextQ(),O=$('ngQO');$('ngDone').hidden=true;$('ngQz').hidden=false;$('ngQQ').textContent=q[0];$('ngQF').textContent='';$('ngQB').hidden=true;O.innerHTML='';
+shuf([q[1]].concat(q[2])).forEach(function(a){var b=document.createElement('button');b.type='button';b.className='ng-btn';b.textContent=a;b.addEventListener('click',function(){if(!$('ngQB').hidden)return;var ok=a===q[1];O.querySelectorAll('button').forEach(function(x){if(x.textContent===q[1])x.classList.add('ok');else if(x===b)x.classList.add('no')});
+$('ngQF').textContent=ok?'Goed zo! Proost.':'Helaas, het juiste antwoord is: '+q[1];ok?tone(520,880,.25,'triangle',.12):bleh();$('ngQB').hidden=false});O.appendChild(b)})});
+$('ngQB').addEventListener('click',function(){$('ngQz').hidden=true;$('ngDone').hidden=false});
+})();
+</script></body></html>
