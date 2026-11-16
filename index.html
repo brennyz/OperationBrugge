@@ -295,7 +295,7 @@ footer{opacity:.85;padding-block:2rem;text-align:center}
 
 .ng-wrap{max-width:1080px;margin:3rem auto;padding-inline:clamp(1rem,3vw,1.75rem)}
 .ng-sub{opacity:.8}
-.ng{position:relative;height:360px;border:2px solid #e60012;box-shadow:4px 4px 0 #000;background:radial-gradient(ellipse at 50% 120%,#3a2614,#120c07 70%);overflow:hidden;user-select:none}
+.ng{position:relative;height:360px;border:3px solid #e60012;box-shadow:6px 6px 0 #000;background:#070503;overflow:hidden;user-select:none}
 .ng-sky{position:absolute;left:0;right:0;bottom:0;width:100%;height:60%}
 .ng-lamps{position:absolute;inset:0}
 .lp{position:absolute;bottom:22%;width:34px;height:110px;margin-left:-17px;background:none;border:0;padding:0;cursor:pointer}
@@ -316,11 +316,25 @@ footer{opacity:.85;padding-block:2rem;text-align:center}
 .bg-p{font:1.6rem Anton,Impact,sans-serif;color:#e7b45a}
 .bg-r{border-radius:6px;padding:.45rem 1rem;background:#2a1d14;color:#e7b45a;border:1px solid rgba(230,0,18,.45);cursor:pointer}
 /* platformer */
-.ng{height:auto;aspect-ratio:16/9;min-height:300px;touch-action:none;-webkit-user-select:none;-webkit-touch-callout:none}
-.ng canvas{display:block;width:100%;height:100%;touch-action:none}
-.ng-hud{position:absolute;top:.6rem;left:.8rem;right:3.2rem;display:flex;gap:1rem;flex-wrap:wrap;font:1rem "Bebas Neue",Anton,sans-serif;letter-spacing:.1em;color:#e7b45a;pointer-events:none}
+.ng-wrap{padding-bottom:22px;overflow:visible}
+.ng{height:auto;aspect-ratio:16/9;min-height:0;padding:16px;touch-action:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.ng::before{content:"";position:absolute;inset:7px;z-index:3;pointer-events:none;background:
+linear-gradient(#e7b45a,#e7b45a) left top/28px 4px no-repeat,
+linear-gradient(#e7b45a,#e7b45a) left top/4px 28px no-repeat,
+linear-gradient(#e7b45a,#e7b45a) right top/28px 4px no-repeat,
+linear-gradient(#e7b45a,#e7b45a) right top/4px 28px no-repeat,
+linear-gradient(#e7b45a,#e7b45a) left bottom/28px 4px no-repeat,
+linear-gradient(#e7b45a,#e7b45a) left bottom/4px 28px no-repeat,
+linear-gradient(#e7b45a,#e7b45a) right bottom/28px 4px no-repeat,
+linear-gradient(#e7b45a,#e7b45a) right bottom/4px 28px no-repeat}
+.ng canvas{position:absolute;display:block;touch-action:none}
+.ng-hud{position:absolute;top:22px;left:22px;right:7.2rem;display:flex;gap:1rem;flex-wrap:wrap;font:1rem "Bebas Neue",Anton,sans-serif;letter-spacing:.1em;color:#e7b45a;pointer-events:none;z-index:5;text-shadow:0 1px 2px #000}
 .ng-hud b{color:#f4ecdc;font-weight:400}
-.ng-help{position:absolute;top:.5rem;right:.6rem;width:44px;height:44px;margin:0;font-size:1.1rem;z-index:5}
+.ng-help,.ng-fs{position:absolute;top:18px;width:44px;height:44px;margin:0!important;transform:none!important;font-size:1.15rem;z-index:6}
+.ng-help{right:18px}
+.ng-fs{right:68px}
+.ng:fullscreen,.ng.is-fs{width:100vw;height:100dvh;max-width:none;aspect-ratio:auto;min-height:0;margin:0;border-width:0;box-shadow:none;background:#070503;padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+.ng.is-fs{position:fixed;inset:0;z-index:10000}
 .ng-leg{position:absolute;top:3.4rem;right:.6rem;left:.6rem;max-width:440px;margin-left:auto;z-index:6;background:linear-gradient(#4a2e18,#2a1d14);color:#f4ecdc;border:1px solid rgba(230,0,18,.45);border-radius:8px;padding:.8rem 1rem;font:.85rem/1.45 Archivo,sans-serif;box-shadow:0 0 18px rgba(231,180,90,.25)}
 .ng-leg[hidden]{display:none}
 .ng-leg h4{margin:0 0 .4rem;font:1.3rem "Bebas Neue",Anton,sans-serif;letter-spacing:.08em;color:#e7b45a}
@@ -343,6 +357,11 @@ footer{opacity:.85;padding-block:2rem;text-align:center}
 @media (max-width:520px){.ng-opts{grid-template-columns:1fr}}
 .ng-fb{min-height:1.4em;color:#f0c674}
 .bg{z-index:6}
+.boat{background:linear-gradient(135deg,#2a1d14,#4a2e18);color:#f6ead6;border:2px solid #e60012;box-shadow:6px 6px 0 #000;border-radius:16px;padding:22px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px 28px}
+.boat h3{font-family:"Playfair Display",serif;color:#e7b45a;margin:0 0 6px;font-size:1.15rem}
+.boat p,.boat li{margin:0 0 6px;line-height:1.5;font-size:.95rem}.boat ul{margin:0;padding-left:18px}
+.boat a{color:#e7b45a;font-weight:700}.boat .warn{color:#ffb3a8;font-weight:700}
+.boat .big{grid-column:1/-1;font-size:1.05rem}.boat .big b{color:#e7b45a}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1;transform:none}}
 
 .sw{display:flex;align-items:center;gap:16px;margin-top:12px;padding:12px 16px;border-radius:16px;background:linear-gradient(135deg,#2a1d14,#4a2e18);color:#fff;box-shadow:0 8px 20px rgba(200,134,42,.35);}.sw.run{animation:swPulse 1.2s ease-in-out infinite}
@@ -375,6 +394,17 @@ footer{opacity:.85;padding-block:2rem;text-align:center}
 <li><a href="#f" data-t="Dark Side of Bruges"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg> Dark Side + <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg></a></li></ul></div></div>
 <div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Brugge_Rozenhoedkaai_R02.jpg/1280px-Brugge_Rozenhoedkaai_R02.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V4h6v3M4 12h16"/></svg></div></div><div class="bd"><div>Zondag 22 nov</div><div class="tm">11:00</div><b>Uitchecken boot</b> <span class="fixed ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> geboekt</span><ul><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2M8 3v3M12 3v3"/></svg> Rustig lunchen in de stad</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v2H3z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/><path d="M5 11h14"/></svg> Antoine is BOB naar huis</li></ul></div></div>
 </div>
+<h2 id="boot"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M4 15l1-5h14l1 5"/><path d="M8 10V6h6v4"/></svg> Onze boot</h2>
+<div class="boat">
+<div class="big"><b>Roef van woonschip MS Rio Claro</b>, Kruisvest 11, 8000 Brugge. <a href="https://maps.app.goo.gl/vdJf3LUmP2BmwPy27" target="_blank" rel="noopener">Open in Google Maps</a></div>
+<div><h3>In- en uitchecken</h3><p>Inchecken vrijdag 20 nov vanaf 15:00.</p><p>Uitchecken zondag 22 nov om 11:00.</p><p>De roef is tot 12:00 nog verhuurd. Spullen eerder neerzetten mag, maar geef dan eerst even een seintje.</p></div>
+<div><h3>Parkeren</h3><p>Het dichtstbij is de straat Leestenburg (betaald, met parkeermeters).</p><p>In de boot liggen blauwe parkeerkaarten voor 4 uur gratis parkeren in de Brugse rand, niet in de binnenstad.</p><p>Gratis randparking op 1 km: <a href="https://maps.app.goo.gl/9X39Ka3Xs57sRpUa7?g_st=ac" target="_blank" rel="noopener">route</a>.</p></div>
+<div><h3>Binnenkomen</h3><p>Via het <b>derde loopbrugje</b> aan de achterkant.</p><p class="warn">Niet via het tweede loopbrugje met code, daar zitten andere gasten.</p><p>Na 22:00 geen lawaai. De verwarming staat al aan.</p></div>
+<div><h3>Aan boord</h3><ul><li>Beddengoed, dekens en handdoeken zijn er.</li><li>Bestek ligt in de la van de tafel.</li><li>De hele ruimte tot aan het gordijn is van ons.</li><li>Wifi-QR hangt in de living.</li><li>Er staan welkomstdrankjes klaar.</li></ul></div>
+<div><h3>Water</h3><p>Flessenwater mag gratis op.</p><p>Kraanwater wordt gezuiverd, maar de voorraad is beperkt: ga er zuinig mee om. De pompen draaien 's nachts van 22:00 tot 06:00.</p></div>
+<div><h3>Contact bij problemen</h3><p>Jesse <a href="tel:+32484141059">+32 484 14 10 59</a></p><p>Fien <a href="tel:+32476398370">+32 476 39 83 70</a></p></div>
+<div><h3>Tips van de hosts</h3><p><a href="https://maps.app.goo.gl/pe1a3mDe4f6BRKMo6?g_st=aw" target="_blank" rel="noopener">Hun Brugge-tips op Google Maps</a></p></div>
+</div>
 <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M11 21l2-7 3 3v4M13 14l-1-5-3 2-1 4M12 9l4 2 2-1"/></svg> Tourkeuze</h2>
 <form id="f">
 <label>Wie ben je? <select id="who"><option>Sjoerd</option><option>Antoine</option><option>Mark</option><option>Brendon</option></select></label>
@@ -392,8 +422,8 @@ footer{opacity:.85;padding-block:2rem;text-align:center}
 <section id="nacht" class="ng-wrap"><h2>Nachtwandeling door Brugge</h2><p class="ng-sub">Loop en spring door nachtelijk Brugge, steek de lantaarns aan, ontwijk appelsap en melk en haal de biertap. Daar wacht je beloning.</p>
 <div class="ng" id="ng"><canvas id="ngC" aria-label="Platformspel nachtelijk Brugge"></canvas>
 <div class="ng-hud"><span>Level <b id="ngLv">1</b></span><span>Lantaarns <b id="ngS">0 / 0</b></span><span>Hartjes <b id="ngH">♥♥♥</b></span></div>
-<button type="button" class="qi ng-help" id="ngI" aria-expanded="false" aria-label="Zo speel je">?</button>
-<div class="ng-leg" id="ngLeg" hidden><h4>Zo speel je</h4><h5>Computer</h5><ul><li>Pijltjes ← → of A / D: lopen</li><li>Spatie, W of pijltje ↑: springen</li><li>Muis over het glas bewegen: bier tappen</li><li>Muisklik: menu en bonusvraag</li></ul><h5>Mobiel / iPhone</h5><ul><li>Knoppen onderin: links, rechts, springen</li><li>Veeg omhoog: springen · veeg links/rechts: lopen</li><li>Sleep je vinger over het glas: bier tappen</li><li>Tik: menu en bonusvraag</li></ul><p style="margin:.5rem 0 0;opacity:.8">Lantaarns aansteken = punten. Appelsap en melk kosten een hartje. Haal de biertap aan het eind!</p></div>
+<button type="button" class="qi ng-fs" id="ngFs" aria-pressed="false" aria-label="Volledig scherm">FS</button><button type="button" class="qi ng-help" id="ngI" aria-expanded="false" aria-label="Zo speel je">?</button>
+<div class="ng-leg" id="ngLeg" hidden><h4>Zo speel je</h4><h5>Computer</h5><ul><li>Pijltjes ← → of A / D: lopen</li><li>Spatie, W of pijltje ↑: springen</li><li>Muis over het glas bewegen: bier tappen</li><li>Muisklik: menu en bonusvraag</li><li>FS rechtsboven: volledig scherm, nog eens of Esc om te sluiten</li></ul><h5>Mobiel / iPhone</h5><ul><li>Knoppen onderin: links, rechts, springen</li><li>Veeg omhoog: springen · veeg links/rechts: lopen</li><li>Sleep je vinger over het glas: bier tappen</li><li>Tik: menu en bonusvraag</li></ul><p style="margin:.5rem 0 0;opacity:.8">Lantaarns aansteken = punten. Appelsap en melk kosten een hartje. Haal de biertap aan het eind!</p></div>
 <div class="ng-ctl" id="ngCtl"><div><button type="button" data-k="l" aria-label="Links">◀</button><button type="button" data-k="r" aria-label="Rechts">▶</button></div><div><button type="button" data-k="j" aria-label="Springen">▲</button></div></div>
 <div class="ng-pan" id="ngStart"><h3>Operation Brugge: de nachtwandeling</h3><p>Help het poppetje naar de biertap. Elk level groeit zijn buikje een beetje.</p><div class="ng-btns"><button type="button" class="ng-btn" id="ngGo">Start</button></div></div>
 <div class="bg" id="bg" hidden><div class="bg-t">Beweeg je muis of vinger over het glas om te tappen</div><div class="bg-glass" id="bgG"><div class="bg-fill" id="bgF"><div class="bg-foam"></div></div></div><div class="bg-p" id="bgP">0%</div><button type="button" class="bg-r" id="bgR" hidden>Verder</button></div>
@@ -535,8 +565,15 @@ function plop(p){tone(500+p*3,140,.12,'sine',.25)}
 function bleh(){var a=ac();if(!a)return;var o=a.createOscillator(),f=a.createBiquadFilter(),g=a.createGain(),t=a.currentTime;o.type='sawtooth';o.frequency.setValueAtTime(220,t);o.frequency.linearRampToValueAtTime(150,t+.35);f.type='lowpass';f.frequency.value=700;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.16,t+.04);g.gain.exponentialRampToValueAtTime(.001,t+.4);o.connect(f);f.connect(g);g.connect(a.destination);o.start(t);o.stop(t+.42)}
 function jumpS(){tone(300,520,.12,'triangle',.08)}
 /* canvas */
-var VW=640,VH=360,sc=1;function fit(){var w=NG.clientWidth,h=NG.clientHeight,d=window.devicePixelRatio||1;C.width=Math.round(w*d);C.height=Math.round(h*d);sc=C.width/VW;VH=C.height/sc}
-fit();window.addEventListener('resize',fit);if(window.ResizeObserver)new ResizeObserver(fit).observe(NG);
+var VW=640,VH=360,sc=1;function fit(){var st=getComputedStyle(NG),pl=parseFloat(st.paddingLeft)||0,pr=parseFloat(st.paddingRight)||0,pt=parseFloat(st.paddingTop)||0,pb=parseFloat(st.paddingBottom)||0,aw=NG.clientWidth-pl-pr,ah=NG.clientHeight-pt-pb;if(aw<2||ah<2)return;var w=aw,h=aw*9/16;if(h>ah){h=ah;w=h*16/9}w=Math.floor(w);h=Math.floor(h);C.style.left=(pl+(aw-w)/2)+'px';C.style.top=(pt+(ah-h)/2)+'px';C.style.width=w+'px';C.style.height=h+'px';var d=Math.min(window.devicePixelRatio||1,2);C.width=Math.round(w*d);C.height=Math.round(h*d);sc=C.width/VW;VH=C.height/sc}
+fit();window.addEventListener('resize',fit);if(window.ResizeObserver)new ResizeObserver(fit).observe(NG)
+var fsBtn=$('ngFs');function fsOn(){return document.fullscreenElement===NG||NG.classList.contains('is-fs')}
+function syncFs(){var on=fsOn();if(fsBtn){fsBtn.textContent=on?'X':'FS';fsBtn.setAttribute('aria-pressed',on);fsBtn.setAttribute('aria-label',on?'Scherm sluiten':'Volledig scherm')}requestAnimationFrame(fit)}
+function toggleFs(){if(fsOn()){NG.classList.remove('is-fs');document.body.style.overflow='';if(document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen()}else{var req=NG.requestFullscreen||NG.webkitRequestFullscreen;if(req){var p=req.call(NG);if(p&&p.catch)p.catch(function(){NG.classList.add('is-fs');document.body.style.overflow='hidden';syncFs()})}else{NG.classList.add('is-fs');document.body.style.overflow='hidden'}}syncFs()}
+if(fsBtn)fsBtn.addEventListener('click',function(e){e.stopPropagation();e.preventDefault();toggleFs()});
+document.addEventListener('fullscreenchange',function(){if(!document.fullscreenElement)NG.classList.remove('is-fs');syncFs()});
+document.addEventListener('webkitfullscreenchange',function(){if(!document.webkitFullscreenElement)NG.classList.remove('is-fs');syncFs()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&NG.classList.contains('is-fs')){NG.classList.remove('is-fs');document.body.style.overflow='';syncFs()}});
 /* state */
 var lv=1,belly=4,bellyT=4,hearts=3,state='menu',P,lev,cam=0,keys={},stars=[],sky=[],parts=[],shake=0;
 for(var i=0;i<70;i++)stars.push([Math.random()*2000,Math.random()*170,Math.random()*1.4+.3]);
