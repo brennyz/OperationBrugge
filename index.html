@@ -380,6 +380,31 @@ linear-gradient(#e7b45a,#e7b45a) right bottom/4px 28px no-repeat}
 @keyframes swFill{to{stroke-dashoffset:0}}
 @keyframes swWob{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg) scale(1.1)}}
 @keyframes swPulse{0%,100%{box-shadow:0 8px 20px rgba(200,134,42,.3)}50%{box-shadow:0 8px 32px rgba(231,180,90,.7)}}
+
+.boat .fshot{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:14px;margin:6px 0 4px}
+.boat .fshot-cap{margin:0!important;max-width:34rem;text-align:center;color:#f6ead6!important;font-size:.98rem!important;line-height:1.45!important}
+.boat .fshot-phone{width:min(100%,340px);padding:12px;border-radius:38px;background:#0c0c0e;box-shadow:0 18px 40px rgba(0,0,0,.45),inset 0 0 0 2px #2a2a2e;position:relative}
+.boat .fshot-phone::before{content:"";position:absolute;top:18px;left:50%;width:96px;height:22px;margin-left:-48px;background:#000;border-radius:20px;z-index:3}
+.boat .fshot-screen{background:#fff;border-radius:26px;overflow:hidden;color:#222;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;display:flex;flex-direction:column;min-height:560px}
+.boat .fshot-status{display:flex;justify-content:space-between;align-items:center;padding:14px 22px 6px;font:600 12px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#111;letter-spacing:.2px}
+.boat .fshot-sigs{display:flex;align-items:center;gap:5px;font-weight:700;font-size:11px}
+.boat .fshot-sigs i{display:inline-block;width:16px;height:9px;border:1.5px solid #111;border-radius:2px;position:relative}
+.boat .fshot-sigs i::after{content:"";position:absolute;left:1px;top:1px;bottom:1px;width:9px;background:#111;border-radius:1px}
+.boat .fshot-bar{display:flex;align-items:center;gap:10px;padding:8px 14px 10px;border-bottom:1px solid #ebebeb}
+.boat .fshot-back{font-size:28px;line-height:1;color:#222;font-weight:300;width:18px}
+.boat .fshot-av{width:36px;height:36px;border-radius:50%;background:#ff385c;color:#fff;display:grid;place-items:center;font:700 16px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;flex:none}
+.boat .fshot-who{display:flex;flex-direction:column;min-width:0}
+.boat .fshot-who b{font:600 15px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#222}
+.boat .fshot-who small{font:400 12px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#717171}
+.boat .fshot-when{text-align:center;color:#717171;font:500 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:14px 16px 4px;letter-spacing:.01em}
+.boat .fshot-msg{padding:8px 16px 16px;color:#222!important;font:400 14.5px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.boat .fshot-msg p{margin:0 0 .7rem!important;color:#222!important;font-size:14.5px!important;line-height:1.45!important;font-weight:400}
+.boat .fshot-msg p:last-child{margin-bottom:0!important}
+.boat .fshot-msg ul{margin:.15rem 0 .75rem;padding:0 0 0 1.1rem;list-style:disc}
+.boat .fshot-msg li{margin:0 0 .28rem;color:#222!important;font-size:14.5px!important;line-height:1.4!important;font-weight:400!important;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important}
+.boat .fshot-input{margin-top:auto;display:flex;align-items:center;gap:8px;padding:10px 12px 16px;border-top:1px solid #ebebeb;background:#fff}
+.boat .fshot-input span{flex:1;background:#f7f7f7;border:1px solid #ddd;border-radius:999px;padding:10px 14px;color:#9a9a9a;font:400 14px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.boat .fshot-send{flex:none!important;width:32px;height:32px;border-radius:50%;background:#222;color:#fff;display:grid;place-items:center;font:700 16px/1 -apple-system,sans-serif;padding:0!important}
 </style></head><body>
 <header><h1><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg> Operation Brugge</h1><p>Sj.B.A.M. · 20–22 november 2026</p><div id="cd"></div></header>
 <div class="wrap">
@@ -397,6 +422,31 @@ linear-gradient(#e7b45a,#e7b45a) right bottom/4px 28px no-repeat}
 <h2 id="boot"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M4 15l1-5h14l1 5"/><path d="M8 10V6h6v4"/></svg> Onze boot</h2>
 <div class="boat">
 <div class="big"><b>Roef van woonschip MS Rio Claro</b>, Kruisvest 11, 8000 Brugge. <a href="https://maps.app.goo.gl/vdJf3LUmP2BmwPy27" target="_blank" rel="noopener">Open in Google Maps</a></div>
+<div class="fshot">
+<p class="fshot-cap">Fien stuurde vanochtend nog een aanvulling. Screenshot uit Airbnb, even lezen voor we aankomen.</p>
+<div class="fshot-phone" role="img" aria-label="Screenshot van een Airbnb-bericht van Fien: in het ruim logeren vier dames van de uni, en de roef moet het rustig houden.">
+<div class="fshot-screen">
+<div class="fshot-status"><span>10:14</span><span class="fshot-sigs">5G <i></i></span></div>
+<div class="fshot-bar"><span class="fshot-back">‹</span><span class="fshot-av">F</span><span class="fshot-who"><b>Fien</b><small>Co-host · MS Rio Claro</small></span></div>
+<div class="fshot-when">17 november 2026 · 10:14</div>
+<div class="fshot-msg">
+<p>Dag Brendon en co</p>
+<p>Nog een aanvulling op mijn vorige bericht, zodat alles duidelijk is.</p>
+<p>De tweede accomodatie in het ruim is dit weekend verhuurd aan <b>vier dames van de uni</b>. Zij hebben ons gevraagd of de heren in de roef het rustig kunnen houden. Ze komen om te studeren en uit te rusten, niet voor een luid weekend.</p>
+<p>Gelieve dus:</p>
+<ul>
+<li>na 22u geen lawaai meer, ook niet op het dek of de loopbruggen</li>
+<li>het tweede loopbrugje niet gebruiken, ook niet om even gedag te zeggen</li>
+<li>muziek binnen houden</li>
+<li>de welkomstdrankjes in de roef laten. Niet aan de dames aanbieden, dat hebben ze zelf gevraagd</li>
+</ul>
+<p>We rekenen op jullie.</p>
+<p>Groet,<br>Fien</p>
+</div>
+<div class="fshot-input"><span>Schrijf een bericht</span><span class="fshot-send">↑</span></div>
+</div>
+</div>
+</div>
 <div><h3>In- en uitchecken</h3><p>Inchecken vrijdag 20 nov vanaf 15:00.</p><p>Uitchecken zondag 22 nov om 11:00.</p><p>De roef is tot 12:00 nog verhuurd. Spullen eerder neerzetten mag, maar geef dan eerst even een seintje.</p></div>
 <div><h3>Parkeren</h3><p>Het dichtstbij is de straat Leestenburg (betaald, met parkeermeters).</p><p>In de boot liggen blauwe parkeerkaarten voor 4 uur gratis parkeren in de Brugse rand, niet in de binnenstad.</p><p>Gratis randparking op 1 km: <a href="https://maps.app.goo.gl/9X39Ka3Xs57sRpUa7?g_st=ac" target="_blank" rel="noopener">route</a>.</p></div>
 <div><h3>Binnenkomen</h3><p>Via het <b>derde loopbrugje</b> aan de achterkant.</p><p class="warn">Niet via het tweede loopbrugje met code, daar zitten andere gasten.</p><p>Na 22:00 geen lawaai. De verwarming staat al aan.</p></div>
