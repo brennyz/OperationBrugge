@@ -1,0 +1,80 @@
+{
+  "model": "flux-lotte-nl",
+  "stops": {
+    "molens": {
+      "hash": "96114596b5212526755ecd59ad6df9d6070dcd80860803f5ec50015c571ed10c",
+      "bytes": 239328,
+      "model": "flux-lotte-nl"
+    },
+    "kruispoort": {
+      "hash": "d45a7e4ae3ec6b06b954c13e99cfbfd8e242704a351e5d9040b90dfda5459438",
+      "bytes": 215424,
+      "model": "flux-lotte-nl"
+    },
+    "jeruzalemkerk": {
+      "hash": "92daea5fd2836b7ee6f106619f856134a41523c6cff5df4781f3bcda00f60076",
+      "bytes": 244656,
+      "model": "flux-lotte-nl"
+    },
+    "janvaneyck": {
+      "hash": "f4bb317fbcb6e3bd93b6b4a4be78c7bd9726c2df912543465c8c8d6f99fd9409",
+      "bytes": 247968,
+      "model": "flux-lotte-nl"
+    },
+    "markt": {
+      "hash": "ca8583b090c2e87596c0b747e62afa66558b4fe98429bad72b121d685332621b",
+      "bytes": 261504,
+      "model": "flux-lotte-nl"
+    },
+    "burg": {
+      "hash": "295c25e086ab11c96945b7f9e5b1ef615d66f15a6f4891b0ad2d99b51fd572a6",
+      "bytes": 262944,
+      "model": "flux-lotte-nl"
+    },
+    "heiligbloed": {
+      "hash": "16fa78079ae7b54d3569b63018ba94a9e0900aa055fd953ad90dd429d58ca885",
+      "bytes": 261504,
+      "model": "flux-lotte-nl"
+    },
+    "vismarkt": {
+      "hash": "fe09b3d49aeba83e0b63183e514da71035427745ce426619598aa4740378c271",
+      "bytes": 261504,
+      "model": "flux-lotte-nl"
+    },
+    "rozenhoedkaai": {
+      "hash": "4cf376975a77ad94f3cad2acddf1b5c851c8873898087378edbc864be9cc9e0d",
+      "bytes": 237888,
+      "model": "flux-lotte-nl"
+    },
+    "gruuthuse": {
+      "hash": "abcd1cb56e2715e0ead6432477bcc4af91e22bfeacfe81c07854593353d71841",
+      "bytes": 282096,
+      "model": "flux-lotte-nl"
+    },
+    "olv": {
+      "hash": "aa15f3e8cc22cb8bed40793a203ed7d4d326675128c4df92103fc447c5472284",
+      "bytes": 268128,
+      "model": "flux-lotte-nl"
+    },
+    "sintjans": {
+      "hash": "3f1b80290c94759d88ec059da8ba8d8e1f385d8a95fc29669f1880c8612173b8",
+      "bytes": 260064,
+      "model": "flux-lotte-nl"
+    },
+    "halvemaan": {
+      "hash": "06973f5765f694a3b2108e10397b34576698bf0eb2557e771c47e14b80d9262d",
+      "bytes": 272448,
+      "model": "flux-lotte-nl"
+    },
+    "begijnhof": {
+      "hash": "7f5d0d04c576e45c2bb5496c6be2a78a2a04eb120333610da3e83d08c16ae7ba",
+      "bytes": 274896,
+      "model": "flux-lotte-nl"
+    },
+    "minnewater": {
+      "hash": "8af0ecfe4a080653ff560fb1194f43283e49375e376ff31231b6bf7c22928ea1",
+      "bytes": 246528,
+      "model": "flux-lotte-nl"
+    }
+  }
+}

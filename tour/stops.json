@@ -1,0 +1,115 @@
+{
+  "start": {
+    "id": "boot",
+    "name": "De boot (Kruisvest 11)",
+    "lat": 51.21963,
+    "lon": 3.23505
+  },
+  "stops": [
+    {
+      "id": "molens",
+      "name": "Molens van de Kruisvest",
+      "lat": 51.21548,
+      "lon": 3.23811,
+      "text": "Op de Kruisvest, letterlijk langs jullie kade, staan nog vier windmolens. In de middeleeuwen stond de stadsmuur vol molens: de wind was er vrij en het graan hoefde de stad niet uit. De Sint-Janshuismolen uit 1770 staat nog op zijn oorspronkelijke plek en maalt in het seizoen echt graan; van april tot oktober kun je er soms in. Zijn buren, zoals de Bonne-Chière, zijn later heropgebouwd. In november draaien de wieken waarschijnlijk stil, maar het beeld blijft typisch Brugge: molens, vesten en water, en jullie boot ertussen. Even naar de rand van de vest lopen levert meteen een van de mooiste uitzichten op de torens van de stad op."
+    },
+    {
+      "id": "kruispoort",
+      "name": "Kruispoort",
+      "lat": 51.21258,
+      "lon": 3.2401,
+      "text": "De Kruispoort is een van de vier middeleeuwse stadspoorten die Brugge nog overheeft. De huidige poort werd gebouwd tussen 1401 en 1406, toen de stad haar muren versterkte. Door deze poort kwam je de stad binnen vanaf de oostkant, over de vesten en de gracht. Kijk even omhoog naar de twee ronde torens en de brug: dit was serieus bedoeld als verdediging, niet als fotodecor. Vanaf de boot is het een klein stukje lopen, en na een lange dag over de kasseien is dit ook jullie laatste poort terug naar de Rio Claro. Even zwaaien naar de poort, en dan naar binnen."
+    },
+    {
+      "id": "jeruzalemkerk",
+      "name": "Jeruzalemkerk",
+      "lat": 51.21236,
+      "lon": 3.23372,
+      "text": "In het stille Sint-Annakwartier, op een paar minuten van de boot, staat de Jeruzalemkerk. De familie Adornes liet haar in de vijftiende eeuw bouwen, naar het voorbeeld van de Heilig Grafkerk in Jeruzalem, nadat ze daar op pelgrimstocht waren geweest. Binnen vind je een nabootsing van het Heilig Graf, en buiten die opvallende toren met een bol erop, alsof iemand een kroon op een kapel heeft gezet. De kerk is nog altijd met die familie verbonden en voelt eerder als een verborgen kapel dan als een toeristenkerk. Een korte omweg vanuit de Kruispoort, en je staat ineens in een heel ander Brugge: stiller, smaller en een stuk minder wafels."
+    },
+    {
+      "id": "janvaneyck",
+      "name": "Jan van Eyckplein",
+      "lat": 51.21159,
+      "lon": 3.22585,
+      "text": "Het Jan van Eyckplein ligt aan de Spiegelrei, waar vroeger de handel en de haven van Brugge samenkwamen. De stadskraan stond hier in de buurt, en de reie was de aanlegplaats. Midden op het plein staat het standbeeld van Jan van Eyck, de schilder van het Lam Gods, die in 1441 in Brugge stierf. Rondom zie je de Poortersloge en een rij gevels die uitkijken over het water. Het is een van de sfeervolste pleinen van de stad, en goed te doen vanaf de boot: je loopt via de Spiegelrei naar het centrum, zonder meteen in de drukte van de Markt te belanden. Even blijven staan. Dit was het zakelijke hart, nu is het vooral een mooi keerpunt."
+    },
+    {
+      "id": "markt",
+      "name": "Markt en Belfort",
+      "lat": 51.20871,
+      "lon": 3.2244,
+      "text": "De Markt is het kloppende midden van Brugge, met het Belfort van 83 meter als strenge toezichthouder. Wie 366 trappen klimt, krijgt uitzicht over bijna elke toren die je dit weekend nog tegenkomt. Op het plein staan Jan Breydel en Pieter de Coninck, helden van de Guldensporenslag in 1302: handig als startpunt, want de meeste rondleidingen beginnen bij dit standbeeld. Onder in het belfort zaten vroeger de stadskeuren, het zegel en de kas, dus dit was geen siergevel maar het geheugen van de stad. Neem de trap of een terras, maar reken op gezelschap. Daarna is de Burg pal om de hoek, of het is nog een goede wandeling terug naar de boot."
+    },
+    {
+      "id": "burg",
+      "name": "Burg en Stadhuis",
+      "lat": 51.20815,
+      "lon": 3.22715,
+      "text": "De Burg is ouder dan de Markt. Hier begon Brugge, rond de burcht van Boudewijn I in de negende eeuw. Het stadhuis, begonnen in 1376, is een van de oudste van de Lage Landen: een gotische gevel, beelden in de nissen, en binnen een pronkzaal waar je bijna fluistert zonder het te willen. Daarnaast staat de Civiele Griffie, later en een stuk speelser, met renaissance en een gouden kroontje. Samen vormen ze een openluchtgeschiedenisles van vijf eeuwen, op één klein plein. Handig: de Heilig-Bloedbasiliek zit hier ook, dus je hoeft voor twee highlights niet van plein te wisselen. Even gaan staan en om je heen kijken is al de helft van het bezoek."
+    },
+    {
+      "id": "heiligbloed",
+      "name": "Heilig-Bloedbasiliek",
+      "lat": 51.20813,
+      "lon": 3.2267,
+      "text": "Aan de hoek van de Burg zit de Basiliek van het Heilig Bloed, eigenlijk twee kerken boven elkaar. Beneden een romaanse kapel, sober en oud; boven een gotische kapel, rijker en drukker. Volgens de overlevering bracht Diederik van de Elzas in 1147 een relikwie mee van de Tweede Kruistocht: een doek met het bloed van Christus. Op vrijdag wordt die traditioneel getoond, en op Onze-Lieve-Heer-Hemelvaart gaat hij de stad door in de Heilig Bloedprocessie. Of elk detail van dat verhaal klopt, laten we aan de historici. Wat wél klopt: dit is al eeuwen een van de belangrijkste plekken van Brugge, en de trap naar boven is kort, maar de sfeer wisselt meteen."
+    },
+    {
+      "id": "vismarkt",
+      "name": "Vismarkt en Huidenvettersplein",
+      "lat": 51.20785,
+      "lon": 3.22812,
+      "text": "Tussen de Burg en de Rozenhoedkaai liggen de Vismarkt en het Huidenvettersplein bijna tegen elkaar. De Vismarkt is een overdekte zuilengalerij uit 1821, gebouwd onder Willem I, en in de ochtend is er nog altijd visverkoop. Het Huidenvettersplein was het plein van het gilde van de leerlooiers; hun oude gildehuis staat er nog, nu tussen de terrassen. Het is een van de meest gefotografeerde hoekjes van Brugge, en ja, het is toeristisch, maar de schaal blijft klein: één bruggetje, één plein, en je staat weer aan het water. Ideaal om twee straten te verbinden zonder te verdwalen. Als de viskraam dicht is, blijft de galerij zelf al de moeite. Daarna is de Rozenhoedkaai letterlijk om de hoek."
+    },
+    {
+      "id": "rozenhoedkaai",
+      "name": "Rozenhoedkaai",
+      "lat": 51.20696,
+      "lon": 3.22708,
+      "text": "Als je één foto van Brugge herkent, is het deze: de bocht in de rei, de trapgevels en het Belfort op de achtergrond. De Rozenhoedkaai dankt haar naam aan de verkopers van rozenkransen, de rozenhoeden, die hier vroeger stonden. Nu staan er vooral mensen met een telefoon in de aanslag, en terecht, want het is het klassieke prentbriefkaartzicht. De bootjes van de reien vertrekken vlakbij, dus het kan er druk zijn. Loop even door tot je de bocht goed hebt, en kijk ook de andere kant op, naar het Huidenvettersplein en de Vismarkt. Dit is geen museumstuk, het is gewoon de stad die toevallig te mooi is. En ja, die foto moet gewoon even."
+    },
+    {
+      "id": "gruuthuse",
+      "name": "Gruuthuse",
+      "lat": 51.20506,
+      "lon": 3.22507,
+      "text": "Het Gruuthuse was het stadspaleis van de heren die het monopolie hadden op gruut: het kruidenmengsel waarmee bier werd gekruid, nog voor hop de standaard werd. Dat klinkt als een detail, maar het was een fortuin. Het huidige gebouw is vooral vijftiende-eeuws en is nu een museum, met een binnenplaats die meteen naar middeleeuws Brugge ruikt. Een slim detail: de familie had een eigen oratorium, een bidkapel met uitzicht in de Onze-Lieve-Vrouwekerk, zodat ze de mis konden volgen zonder zich onder het volk te begeven. Dicht bij de reien, dicht bij de kerk, en een mooie herinnering dat Brugge rijk werd op laken, handel én bier. Voor dit gezelschap is dat laatste waarschijnlijk het belangrijkste hoofdstuk."
+    },
+    {
+      "id": "olv",
+      "name": "Onze-Lieve-Vrouwekerk",
+      "lat": 51.20463,
+      "lon": 3.22448,
+      "text": "De Onze-Lieve-Vrouwekerk herken je van ver: een bakstenen toren van 115,5 meter, een van de hoogste ter wereld in baksteen. Binnen staat de Madonna met Kind van Michelangelo uit 1504, het enige beeld van hem dat tijdens zijn leven Italië verliet. Een Brugse koopman nam het mee naar huis, en het staat er nog. In de kooromgang liggen ook de praalgraven van Maria van Bourgondië en Karel de Stoute. De kerk is net zozeer museum als godshuis, en staat pal naast het Sint-Janshospitaal en het Gruuthuse, dus je kunt hier drie stops aan elkaar knopen zonder extra omwegen. Kijk in elk geval omhoog. Die toren is een statement van een rijke middeleeuwse stad."
+    },
+    {
+      "id": "sintjans",
+      "name": "Sint-Janshospitaal",
+      "lat": 51.204,
+      "lon": 3.22397,
+      "text": "Het Sint-Janshospitaal hoort bij de oudste bewaarde hospitaalgebouwen van Europa en gaat terug tot de twaalfde eeuw. Pelgrims, zieken en armen kwamen hier terecht, pal aan de Mariastraat, onder de toren van de Onze-Lieve-Vrouwekerk. In de oude ziekenzalen hangt nu onder meer werk van Hans Memling, waaronder de schrijn van de heilige Ursula. Je loopt er door zalen, een kapel en een oude apotheek, en je snapt meteen hoe een middeleeuwse stad haar gasten opving. Geen zwaar museum, eerder een stad in een stad. Handig gepland: je stapt zo het Gruuthuse of de kerk in, of je loopt door naar De Halve Maan, een paar minuten verderop. Een rustige stop tussen al dat steen en al dat bier."
+    },
+    {
+      "id": "halvemaan",
+      "name": "De Halve Maan",
+      "lat": 51.20217,
+      "lon": 3.22394,
+      "text": "Brouwerij De Halve Maan brouwt sinds 1856 op het Walplein, midden in de binnenstad, en is nog altijd een familiebedrijf. Hier komen Brugse Zot en Straffe Hendrik vandaan. Sinds 2016 loopt er een ondergrondse bierpijpleiding van 3,2 kilometer naar de bottelarij buiten het centrum, tot 4.000 liter per uur, zodat er geen vrachtwagens meer door de smalle straatjes hoeven. Je kunt een rondleiding doen en naar het dak klimmen: 360 graden Brugge, met een glas achteraf. Voor dit weekend is dit waarschijnlijk geen optionele stop. Reken op een goede wandeling vanaf de boot, of een stuk minder als je toch al bij de Onze-Lieve-Vrouwekerk of het Begijnhof bent. Proost, en bewaar nog wat ruimte voor later."
+    },
+    {
+      "id": "begijnhof",
+      "name": "Begijnhof Ten Wijngaarde",
+      "lat": 51.20135,
+      "lon": 3.22288,
+      "text": "Het Prinselijk Begijnhof Ten Wijngaarde dateert van 1245. Begijnen waren geen nonnen, maar vrouwen die samenwoonden, werkten en baden, zonder eeuwige gelofte. Achter de poort vind je witte huisjes, een grasplein met hoge bomen en ineens veel minder kasseienherrie. Sinds de jaren twintig van de vorige eeuw wonen hier Benedictinessen, naast een paar gewone bewoners. Het staat op de UNESCO-lijst, en je merkt waarom: het voelt als een dorp in de stad. Een stille regel geldt nog steeds: rustig wandelen, niet picknicken op het gras. Perfect als tussendoortje na De Halve Maan of het Minnewater, dat vlakbij ligt. Even de poort door, de drukte achter je laten, en daarna weer de wereld in."
+    },
+    {
+      "id": "minnewater",
+      "name": "Minnewater",
+      "lat": 51.19953,
+      "lon": 3.22398,
+      "text": "Het Minnewater wordt het meer van de liefde genoemd, en de zwanen doen braaf mee aan dat verhaal. In werkelijkheid was dit vooral een praktische waterkom: hier merden de trekschuiten af die Brugge met Gent verbonden, en het waterpeil van de reien werd hier geregeld. Het poortgebouw en het park eromheen maken er nu een van de rustigste stukken van de zuidrand van de binnenstad van. De naam minne is oud Nederlands voor liefde, en dat verhaal plakken de gidsen er graag op, vooral als iemand op een knie dreigt te gaan. Kom vooral even langs, ook zonder iets te vragen. Het is een mooi keerpunt voor een ronde terug naar het centrum, of een rustpunt voor het Begijnhof."
+    }
+  ]
+}
