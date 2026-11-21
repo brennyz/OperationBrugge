@@ -4,7 +4,7 @@
 :root{--ink:#2a1d14;--cream:#f7efe3;--paper:#fffaf2;--amber:#c8862a;--amber2:#e7b45a;--canal:#2f5d62;--canal2:#5e8b8f;--brick:#9c4a2f;--muted:#7a6a5c;--r:18px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px}
-header{min-height:340px;max-height:420px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:32px max(24px,calc((100% - 1040px)/2)) 36px;color:#fff;background:linear-gradient(180deg,rgba(20,30,32,.15) 0%,rgba(20,30,32,.35) 45%,rgba(42,29,20,.92) 100%),url("https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Rozenhoedkaai_%28canal%29_and_Belfry_of_Bruges%2C_Bruges%2C_Belgium_%28Ank_Kumar%2C_Infosys_Limited%29_05.jpg/1280px-Rozenhoedkaai_%28canal%29_and_Belfry_of_Bruges%2C_Bruges%2C_Belgium_%28Ank_Kumar%2C_Infosys_Limited%29_05.jpg") center 40%/cover}
+header{min-height:340px;max-height:420px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:32px max(24px,calc((100% - 1040px)/2)) 36px;color:#fff;background:linear-gradient(180deg,rgba(20,30,32,.15) 0%,rgba(20,30,32,.35) 45%,rgba(42,29,20,.92) 100%),url("img/rio-claro.jpg") center center/cover}
 header h1{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.02;margin:0;letter-spacing:-.5px;text-shadow:0 4px 24px rgba(0,0,0,.4)}
 header p{margin:10px 0 0;font-size:1.1rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber2);font-weight:700}
 #cd{margin-top:22px;padding:10px 18px;border-radius:999px;background:rgba(255,250,242,.14);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);font-weight:600;font-variant-numeric:tabular-nums}
@@ -105,9 +105,9 @@ h2 .ico{width:1em;height:1em;color:var(--amber)}
 .fixed .ico{width:.95em;height:.95em;margin-right:.2em;stroke-width:3}
 
 /* === JOKER / OPERATION BRUGGE THEME === */
-:root{--hero:url("https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Rozenhoedkaai_%28canal%29_and_Belfry_of_Bruges%2C_Bruges%2C_Belgium_%28Ank_Kumar%2C_Infosys_Limited%29_05.jpg/1280px-Rozenhoedkaai_%28canal%29_and_Belfry_of_Bruges%2C_Bruges%2C_Belgium_%28Ank_Kumar%2C_Infosys_Limited%29_05.jpg");--ink:#f2f2f2;--paper:#1a1a1a;--cream:#121212;--amber:#e7b45a;--amber2:#f0c674;--canal:#e7b45a;--canal2:#f0c674;--brick:#ffffff;--muted:#a9a9a9}
+:root{--hero:url("img/rio-claro.jpg");--ink:#f2f2f2;--paper:#1a1a1a;--cream:#121212;--amber:#e7b45a;--amber2:#f0c674;--canal:#e7b45a;--canal2:#f0c674;--brick:#ffffff;--muted:#a9a9a9}
 body{background:#121212 radial-gradient(circle at 20% 0,#3a2614 0,transparent 50%);color:#eee}
-header{background:linear-gradient(115deg,rgba(0,0,0,.92) 0 38%,rgba(231,180,90,.45) 38% 40%,rgba(0,0,0,.35) 40%),var(--hero) center 40%/cover!important;clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
+header{background:linear-gradient(115deg,rgba(0,0,0,.92) 0 38%,rgba(231,180,90,.45) 38% 40%,rgba(0,0,0,.35) 40%),var(--hero) center center/cover!important;clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
 header h1{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:1px;transform:skewX(-8deg) rotate(-2deg);text-shadow:4px 4px 0 #e60012,8px 8px 0 #000}
 header p{font-family:"Bebas Neue",sans-serif;font-size:1.5rem;color:#fff;background:#e7b45a;padding:2px 14px;transform:skewX(-12deg);display:inline-block}
 #cd{background:#000;border:2px solid #e7b45a;border-radius:0;transform:skewX(-8deg);font-family:"Bebas Neue",sans-serif;font-size:1.4rem;letter-spacing:1px}
@@ -492,9 +492,58 @@ a.tour-nextmap.is-off{opacity:.4;pointer-events:none}
 .boat .fshot-input{margin-top:auto;display:flex;align-items:center;gap:8px;padding:10px 12px 16px;border-top:1px solid #ebebeb;background:#fff}
 .boat .fshot-input span{flex:1;background:#f7f7f7;border:1px solid #ddd;border-radius:999px;padding:10px 14px;color:#9a9a9a;font:400 14px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 .boat .fshot-send{flex:none!important;width:32px;height:32px;border-radius:50%;background:#222;color:#fff;display:grid;place-items:center;font:700 16px/1 -apple-system,sans-serif;padding:0!important}
+.boat .horn{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:8px;margin:2px 0 6px}
+.boat .horn audio{position:absolute;width:0;height:0;opacity:0;pointer-events:none}
+.boat .horn-btn{margin:0;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:min(100%,280px);min-height:64px;padding:14px 34px;background:#e7b45a;color:#2a1d14;border:2px solid #e60012;box-shadow:6px 6px 0 #000;font-family:"Bebas Neue",sans-serif;font-size:2rem;letter-spacing:.14em;text-transform:uppercase;transform:skewX(-8deg);cursor:pointer}
+.boat .horn-btn .ico{width:1.6rem;height:1.6rem}
+.boat .horn-btn:hover{background:#fff;color:#2a1d14;transform:skewX(-8deg) scale(1.04);box-shadow:6px 6px 0 #000,0 0 16px rgba(231,180,90,.45)}
+.boat .horn-btn:active{transform:skewX(-8deg) scale(.98)}
+.boat .horn-btn.is-on{background:#fff;animation:hornShake .08s linear infinite}
+.boat .horn-line{margin:0;min-height:2.2rem;font-family:"Permanent Marker",cursive;color:#e7b45a;font-size:1.15rem;letter-spacing:.02em;opacity:.8;transform:rotate(-2deg);transition:transform .2s ease,font-size .2s ease,opacity .2s ease}
+.boat .horn-line.is-hot{opacity:1;font-size:2rem;transform:rotate(-3deg) scale(1.06);text-shadow:3px 3px 0 #000}
+@keyframes hornShake{0%{transform:skewX(-8deg) translateX(0)}25%{transform:skewX(-6deg) translateX(-2px)}50%{transform:skewX(-10deg) translateX(2px)}75%{transform:skewX(-7deg) translateX(-1px)}100%{transform:skewX(-8deg) translateX(0)}}
+@media (max-width:560px){.boat .horn-btn{width:100%}.boat .horn-line.is-hot{font-size:1.55rem}}
+@media (prefers-reduced-motion:reduce){.boat .horn-btn.is-on{animation:none}.boat .horn-line{transition:none}}
+@media (max-width:700px){header{min-height:620px;max-height:none}}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 22px}
+.shots a{display:block;border:2px solid #e60012;box-shadow:6px 6px 0 #000;overflow:hidden;background:#000;line-height:0}
+.shots img{width:100%;height:min(72vh,720px);object-fit:cover;object-position:center 30%}
+.shots a:first-child img{object-position:center 46%}
+.shots a:hover{transform:none;box-shadow:6px 6px 0 #000,0 0 18px rgba(231,180,90,.35)}
+.quiz{margin:0 0 28px;padding:20px 18px 18px;background:linear-gradient(160deg,#21170f,#2c1e13);border:2px solid #e60012;box-shadow:6px 6px 0 #000}
+.quiz h2{margin:0 0 8px}
+.quiz .qlead,.quiz .qask,.quiz .qfb,.quiz .qbest{color:#f6ead6}
+.quiz .qlead{max-width:40rem;margin:0 0 14px}
+.quiz .qmedal{width:132px;height:132px;margin:4px auto 12px;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 35% 30%,#fff6d2,#e7b45a 42%,#8a5a18);border:4px solid #e60012;box-shadow:4px 4px 0 #000,inset 0 0 0 7px #2a1d14;color:#2a1d14}
+.quiz .qmedal .ico{width:34px;height:34px;margin:0 auto 2px}
+.quiz .qmedal b{display:block;font-family:"Bebas Neue",sans-serif;font-size:1.35rem;letter-spacing:.06em;line-height:1}
+.quiz .qmedal small{display:block;font:800 .68rem Inter,sans-serif;letter-spacing:.04em}
+.quiz .qmedal.is-off{filter:grayscale(1) brightness(.7);box-shadow:4px 4px 0 #000}
+.quiz .qmeta{margin:0 0 8px;color:#e7b45a;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
+.quiz .qbar{height:8px;background:rgba(255,250,242,.12);border-radius:999px;overflow:hidden;margin:0 0 14px}
+.quiz .qbar span{display:block;height:100%;background:#e7b45a;width:0}
+.quiz .qask{font-family:"Playfair Display",serif;font-size:1.35rem;line-height:1.3;margin:0 0 12px;color:#fff}
+.quiz .qopts{display:grid;gap:8px}
+.quiz .qopt,.quiz .qnext,.quiz .qshare{margin:0;transform:none;border-radius:0;box-shadow:none;font-family:Inter,sans-serif;letter-spacing:0;font-size:1rem}
+.quiz .qopt{width:100%;text-align:left;background:#1c140d;color:#f6ead6;border:1px solid rgba(230,0,18,.45);padding:12px 14px;min-height:48px}
+.quiz .qopt:hover{transform:none;background:#3a2614;color:#fff;box-shadow:none}
+.quiz .qopt:disabled{cursor:default;opacity:1}
+.quiz .qopt.ok,.quiz .qopt.ok:hover{background:#3c5a2a;color:#f4ecdc}
+.quiz .qopt.no,.quiz .qopt.no:hover{background:#5a1a12;color:#f4ecdc}
+.quiz .qfb{min-height:1.4em;margin:10px 0;font-weight:700}
+.quiz .qnext,.quiz .qshare{display:inline-flex;align-items:center;justify-content:center;background:#e7b45a;color:#2a1d14;border:2px solid #000;box-shadow:4px 4px 0 #000;padding:12px 18px;font-weight:800;text-decoration:none}
+.quiz .qnext:hover,.quiz .qshare:hover{background:#fff;color:#2a1d14;transform:none;text-shadow:none}
+.quiz .qactions{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.quiz .qscore{font-family:"Bebas Neue",sans-serif;font-size:3rem;letter-spacing:.04em;color:#e7b45a;margin:0;line-height:1}
+.quiz .qbest{margin:8px 0 0;color:#f0c674}
+@media (max-width:700px){.shots{grid-template-columns:1fr}.shots img{height:min(78vh,640px)}.quiz .qactions{flex-direction:column}.quiz .qnext,.quiz .qshare{width:100%}}
 </style></head><body>
 <header><h1><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/><path d="M9.5 12v5M12.5 12v5"/></svg> Operation Brugge</h1><p>Sj.B.A.M. · 20–22 november 2026</p><div id="cd"></div></header>
 <div class="wrap">
+<section class="shots" aria-label="Foto's">
+<a href="img/bord.jpg" target="_blank" rel="noopener"><img src="img/bord.jpg" alt="Iemand zit voor een krijtbord vol namen, met een hand voor het gezicht."></a>
+<a href="img/kerk-nacht.jpg" target="_blank" rel="noopener"><img src="img/kerk-nacht.jpg" alt="Verlichte kerktoren in Brugge bij nacht, achter een houten hek en herfstbladeren."></a>
+</section>
 <p class="tour-entry"><button type="button" class="tour-open" id="tourLock" aria-expanded="false" aria-controls="audiotour">🔒 Audiotour</button></p>
 <!-- audiotour -->
 <section id="audiotour" hidden>
@@ -535,6 +584,11 @@ a.tour-nextmap.is-off{opacity:.4;pointer-events:none}
 </div>
 </section>
 <!-- /audiotour -->
+<section id="quiz" class="quiz">
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.7"/><path d="M12 17h.01"/></svg> Ronde van 15</h2>
+<p class="qlead">Vijftien vragen, één per stop van de audiotour. De beste score is 15 uit 15: dan krijg je de medaille van de boot.</p>
+<div id="quizStage"></div>
+</section>
 <h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg> Planning</h2><div class="tl">
 <div class="card"><div class="ph ph-car"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v2H3z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/><path d="M5 11h14"/></svg></div></div><div class="bd"><div>Vrijdag 20 nov</div><div class="tm">12:00</div><b>Auto ophalen</b><ul><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v2H3z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/><path d="M5 11h14"/></svg> Daarna richting Brugge (~4u50)</li></ul></div></div>
 <div class="card"><div class="ph" style="background-image:url('https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Sint-Janshuismolen-20140322-RM-154925.jpg/1280px-Sint-Janshuismolen-20140322-RM-154925.jpg')"><div class="ic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l2 3h14l2-3z"/><path d="M5 17V12h14v5"/><path d="M8 12V8h6v4"/><path d="M11 8V4"/></svg></div></div><div class="bd"><div>Vrijdag 20 nov</div><div class="tm">15:00</div><b>Inchecken MS Rio Claro</b> <span class="fixed ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> geboekt</span><ul><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v2H3z"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/><path d="M5 11h14"/></svg> ~12:00 vertrek Leek (~4u50)</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg> Kruisvest 11, naast de molens</li><li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M6 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 2.5 2.5 0 0 1 2 4"/></svg> Afzakken: <a href="#f">kies in het formulier</a></li></ul></div></div>
@@ -549,6 +603,11 @@ a.tour-nextmap.is-off{opacity:.4;pointer-events:none}
 <h2 id="boot"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M4 15l1-5h14l1 5"/><path d="M8 10V6h6v4"/></svg> Onze boot</h2>
 <div class="boat">
 <div class="big"><b>Roef van woonschip MS Rio Claro</b>, Kruisvest 11, 8000 Brugge. <a href="https://maps.app.goo.gl/vdJf3LUmP2BmwPy27" target="_blank" rel="noopener">Open in Google Maps</a></div>
+<div class="horn">
+<button type="button" class="horn-btn" id="boatHorn" aria-pressed="false" aria-describedby="boatHornLine"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h3l6 4V6L7 10H4z"/><path d="M16.5 8.5a4 4 0 0 1 0 7"/><path d="M18.5 6a7 7 0 0 1 0 12"/></svg>Toeter</button>
+<p class="horn-line" id="boatHornLine">I'm on a boat</p>
+<audio id="boatHornAudio" src="audio/boottoeter.mp3" preload="auto" playsinline></audio>
+</div>
 <div class="fshot">
 <p class="fshot-cap">Fien stuurde vanochtend nog een aanvulling. Screenshot uit Airbnb, even lezen voor we aankomen.</p>
 <div class="fshot-phone" role="img" aria-label="Screenshot van een Airbnb-bericht van Fien: in het ruim logeren vier Duitse dames, en de roef moet het rustig houden.">
@@ -870,6 +929,61 @@ $('ngQB').addEventListener('click',function(){$('ngQz').hidden=true;$('ngDone').
 
 
 
+
+<!-- quiz-ronde -->
+;(function(){
+var stage=document.getElementById('quizStage');if(!stage)return;
+var BEST='obQuizBest';
+var Q=[
+['Molens van de Kruisvest','Hoeveel windmolens staan er nog op de Kruisvest?','Vier',['Twee','Drie','Zes']],
+['Kruispoort','Wanneer is de huidige Kruispoort gebouwd?','Tussen 1401 en 1406',['Rond 1100','In 1302','Na 1584']],
+['Jeruzalemkerk','Naar welk voorbeeld liet de familie Adornes de kerk bouwen?','De Heilig Grafkerk in Jeruzalem',['De Sint-Pieter in Rome','Het Belfort','De Onze-Lieve-Vrouwekerk']],
+['Jan van Eyckplein','Aan welke rei ligt het Jan van Eyckplein?','De Spiegelrei',['De Dijver','Het Minnewater','De Langerei']],
+['Markt en Belfort','Hoe hoog is het Belfort?','83 meter',['115,5 meter','47 meter','366 meter']],
+['Burg en Stadhuis','In welk jaar begon de bouw van het stadhuis op de Burg?','1376',['1089','1245','1821']],
+['Heilig-Bloedbasiliek','Wie bracht volgens de overlevering de relikwie mee?','Diederik van de Elzas',['Maria van Bourgondië','Jan Breydel','Boudewijn I']],
+['Vismarkt','Uit welk jaar is de overdekte Vismarkt?','1821',['1376','1640','1896']],
+['Rozenhoedkaai','Waar dankt de Rozenhoedkaai haar naam aan?','Verkopers van rozenkransen',['De rozen in de rei','Een ververij van rood laken','De zwanen op het water']],
+['Gruuthuse','Wat was gruut?','Een kruidenmengsel om bier te kruiden',['Een brug over de rei','Een belasting op graan','Een soort kant']],
+['Onze-Lieve-Vrouwekerk','Hoe hoog is de bakstenen toren?','115,5 meter',['83 meter','98 meter','142 meter']],
+['Sint-Janshospitaal','Van wie hangt daar de schrijn van de heilige Ursula?','Hans Memling',['Jan van Eyck','Michelangelo','Pieter Bruegel']],
+['De Halve Maan','Hoe lang is de ondergrondse bierpijpleiding?','3,2 kilometer',['800 meter','12 kilometer','3,2 meter']],
+['Begijnhof Ten Wijngaarde','Uit welk jaar dateert het begijnhof?','1245',['1089','1376','1856']],
+['Minnewater','Wat meerde hier vroeger af?','De trekschuiten naar Gent',['De koggen uit de Hanze','De veerboot naar Zeebrugge','De walvisvaarders']]
+];
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.random()*(i+1)|0,t=a[i];a[i]=a[j];a[j]=t}return a}
+function best(){try{return +localStorage.getItem(BEST)||0}catch(e){return 0}}
+function save(n){try{if(n>best())localStorage.setItem(BEST,String(n))}catch(e){}}
+function medal(on){var d=document.createElement('div');d.className='qmedal'+(on?'':' is-off');d.innerHTML='<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M4 15l1-5h14l1 5"/><path d="M8 10V6h6v4"/></svg><b>BOOT</b><small>'+(on?'BINNEN':'15/15')+'</small>';return d}
+function waText(score){var line=score===15?'15/15 op de ronde van Brugge. Medaille van de boot binnen.':'Ronde van 15 in Brugge: '+score+'/15. De medaille van de boot is voor 15/15.';if(/^https?:$/.test(location.protocol))line+='\n'+location.href.split('#')[0]+'#quiz';return line}
+function clear(node){while(node.firstChild)node.removeChild(node.firstChild)}
+var i=0,score=0,picked=false;
+function intro(){clear(stage);var b=best();stage.appendChild(medal(b===15));var p=document.createElement('p');p.className='qbest';p.textContent=b?('Jouw beste score: '+b+'/15'+(b===15?' · medaille van de boot':'')):'Nog geen score. De medaille blijft aan de boot tot iemand 15/15 haalt.';stage.appendChild(p);var btn=document.createElement('button');btn.type='button';btn.className='qnext';btn.textContent='Start de quiz';btn.addEventListener('click',function(){i=0;score=0;ask()});stage.appendChild(btn)}
+function ask(){picked=false;clear(stage);var q=Q[i];var meta=document.createElement('p');meta.className='qmeta';meta.textContent='Stop '+(i+1)+' van 15 · '+q[0];var bar=document.createElement('div');bar.className='qbar';bar.innerHTML='<span style="width:'+(i/15*100)+'%"></span>';var prompt=document.createElement('p');prompt.className='qask';prompt.textContent=q[1];var opts=document.createElement('div');opts.className='qopts';var fb=document.createElement('p');fb.className='qfb';stage.appendChild(meta);stage.appendChild(bar);stage.appendChild(prompt);stage.appendChild(opts);stage.appendChild(fb);shuf([q[2]].concat(q[3])).forEach(function(label){var b=document.createElement('button');b.type='button';b.className='qopt';b.textContent=label;b.addEventListener('click',function(){if(picked)return;picked=true;var ok=label===q[2];if(ok)score++;opts.querySelectorAll('button').forEach(function(x){x.disabled=true;if(x.textContent===q[2])x.classList.add('ok');else if(x===b)x.classList.add('no')});fb.textContent=ok?'Goed.':'Helaas. Het antwoord is: '+q[2];var next=document.createElement('button');next.type='button';next.className='qnext';next.textContent=i===Q.length-1?'Bekijk je score':'Volgende stop';next.addEventListener('click',function(){i++;if(i<Q.length)ask();else done()});stage.appendChild(next)});opts.appendChild(b)})}
+function done(){save(score);clear(stage);var won=score===15;stage.appendChild(medal(won));var sc=document.createElement('p');sc.className='qscore';sc.textContent=score+'/15';var fb=document.createElement('p');fb.className='qfb';fb.textContent=won?'Medaille van de boot. Die hangt nu bij jou.':'De medaille van de boot is voor 15/15. Deze blijft aan boord.';var bestP=document.createElement('p');bestP.className='qbest';bestP.textContent='Beste score: '+best()+'/15';var actions=document.createElement('div');actions.className='qactions';var share=document.createElement('a');share.className='qshare';share.target='_blank';share.rel='noopener';share.href='https://wa.me/?text='+encodeURIComponent(waText(score));share.textContent='Deel op WhatsApp';var again=document.createElement('button');again.type='button';again.className='qnext';again.textContent='Opnieuw';again.addEventListener('click',intro);actions.appendChild(share);actions.appendChild(again);stage.appendChild(sc);stage.appendChild(fb);stage.appendChild(bestP);stage.appendChild(actions)}
+intro();
+})();
+<!-- /quiz-ronde -->
+
+<!-- boottoeter -->
+;(function(){
+var btn=document.getElementById('boatHorn'),line=document.getElementById('boatHornLine'),audio=document.getElementById('boatHornAudio');
+if(!btn||!line||!audio)return;
+var VOICE_AT=2.010,hotT=0,usingLive=false,liveCtx=null,liveNodes=[],doneT=0;
+function setHot(on){line.classList.toggle('is-hot',!!on)}
+function setOn(on){btn.classList.toggle('is-on',!!on);btn.setAttribute('aria-pressed',on?'true':'false');if(!on)setHot(false)}
+function clearTimers(){if(hotT){clearTimeout(hotT);hotT=0}if(doneT){clearTimeout(doneT);doneT=0}}
+function armHot(ms){if(hotT)clearTimeout(hotT);setHot(false);hotT=setTimeout(function(){setHot(true)},ms)}
+function stopLive(){liveNodes.forEach(function(n){try{n.stop()}catch(e){}});liveNodes=[];if(window.speechSynthesis)speechSynthesis.cancel()}
+audio.addEventListener('timeupdate',function(){if(!usingLive)setHot(audio.currentTime>=VOICE_AT&&!audio.ended)});
+audio.addEventListener('ended',function(){setOn(false)});
+function blast(ctx,when,dur,f1,f2){var master=ctx.createGain();master.gain.setValueAtTime(0.0001,when);master.gain.exponentialRampToValueAtTime(0.55,when+0.04);master.gain.setValueAtTime(0.5,when+Math.max(0.06,dur-0.1));master.gain.exponentialRampToValueAtTime(0.0001,when+dur);[f1,f2].forEach(function(f,i){var o=ctx.createOscillator(),g=ctx.createGain(),lp=ctx.createBiquadFilter();o.type='sawtooth';o.frequency.setValueAtTime(f*0.8,when);o.frequency.exponentialRampToValueAtTime(f,when+0.05);g.gain.value=i?0.4:0.55;lp.type='lowpass';lp.frequency.setValueAtTime(900,when);lp.frequency.exponentialRampToValueAtTime(2200,when+0.08);o.connect(g);g.connect(lp);lp.connect(master);o.start(when);o.stop(when+dur+0.02);liveNodes.push(o)});master.connect(ctx.destination)}
+function ding(ctx,when,f){var o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(0.0001,when);g.gain.exponentialRampToValueAtTime(0.22,when+0.015);g.gain.exponentialRampToValueAtTime(0.0001,when+0.36);o.connect(g);g.connect(ctx.destination);o.start(when);o.stop(when+0.38);liveNodes.push(o)}
+function speakNow(){if(!window.speechSynthesis)return;var u=new SpeechSynthesisUtterance("I'm on a boat");u.lang='en-US';u.rate=0.92;u.pitch=1.08;speechSynthesis.cancel();speechSynthesis.speak(u)}
+function live(){usingLive=true;var AC=window.AudioContext||window.webkitAudioContext;if(!AC){speakNow();armHot(400);return}if(!liveCtx)liveCtx=new AC();var ctx=liveCtx;if(ctx.state==='suspended')ctx.resume();stopLive();var t=ctx.currentTime+0.02;blast(ctx,t,0.72,311.13,415.3);blast(ctx,t+0.81,0.38,329.63,440);[523.25,659.25,783.99,1046.5].forEach(function(f,i){ding(ctx,t+1.33+i*0.13,f)});var primer=new SpeechSynthesisUtterance('\u00a0');primer.volume=0;primer.rate=2;if(window.speechSynthesis){speechSynthesis.cancel();speechSynthesis.speak(primer);setTimeout(speakNow,VOICE_AT*1000)}armHot(VOICE_AT*1000);doneT=setTimeout(function(){if(usingLive)setOn(false)},3700)}
+btn.addEventListener('click',function(){clearTimers();setHot(false);setOn(true);stopLive();usingLive=false;try{audio.pause()}catch(e){}try{audio.currentTime=0}catch(e){}var p=audio.play();armHot(VOICE_AT*1000);if(p&&p.catch)p.catch(function(){live()})});
+})();
+<!-- /boottoeter -->
 
 <!-- audiotour-js -->
 ;(function(){
