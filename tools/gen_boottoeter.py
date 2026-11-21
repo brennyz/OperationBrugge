@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Build audio/boottoeter.mp3: an original boat horn, a short fanfare, then "I'm on a boat".
+"""Build the boat-horn mp3s: an original horn, a short fanfare, then a spoken line.
 
 The voice is espeak-ng (open source), not a recording of any song.
 The fanfare is a plain rising major arpeggio, written for this button.
-The script prints VOICE_AT: the second the spoken phrase starts. index.html
-uses that number so the on-screen line lands with the voice.
+Each voice has a sober file and a slightly tipsy twin (slower, a small pitch
+wander). index.html plays the tipsy file on the second press of that button.
+
+The script prints VOICE_AT: the second the spoken phrase starts. Every file
+uses the same horn intro, so that number is shared.
 
 Requires: python3, numpy, espeak-ng, ffmpeg with libmp3lame.
 Run from anywhere: python3 tools/gen_boottoeter.py
@@ -21,7 +24,7 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "audio" / "boottoeter.mp3"
+AUDIO = ROOT / "audio"
 SR = 22050
 
 def env_adsr(n: int, attack: float, release: float, sr: int = SR) -> np.ndarray:
@@ -87,29 +90,21 @@ def read_wav(path: Path) -> np.ndarray:
     return np.frombuffer(frames, dtype=np.int16).astype(np.float64) / 32768.0
 
 
-def synth_voice(tmp: Path) -> np.ndarray:
+def synth_voice(tmp: Path, voice_id: str, ssml: str, must: tuple[str, ...]) -> np.ndarray:
     # One phrase, no breaks: a break makes espeak say the letter "A"
     # instead of the article. Pitch still rises across the four words.
-    ssml = (
-        "<speak>"
-        '<prosody pitch="-2st" rate="86%">I\'m</prosody> '
-        '<prosody pitch="+3st" rate="88%">on</prosody> '
-        '<prosody pitch="+6st" rate="92%">a</prosody> '
-        '<prosody pitch="+9st" rate="70%">boat</prosody>'
-        "</speak>"
-    )
     phon = subprocess.run(
-        ["espeak-ng", "-v", "en-us", "-m", "-q", "-x", ssml],
+        ["espeak-ng", "-v", voice_id, "-m", "-q", "-x", ssml],
         check=True,
         capture_output=True,
         text=True,
     ).stdout
-    # a# is the article "a". The letter name would be eI, which is the wrong word.
-    if "a#" not in phon.split() and "a#" not in phon:
-        raise SystemExit(f"voice would not say the article 'a': {phon!r}")
+    for token in must:
+        if token not in phon:
+            raise SystemExit(f"{voice_id} missing {token!r} in {phon!r}")
     wav = tmp / "voice.wav"
     subprocess.run(
-        ["espeak-ng", "-v", "en-us", "-m", "-a", "200", "-w", str(wav), ssml],
+        ["espeak-ng", "-v", voice_id, "-m", "-a", "200", "-w", str(wav), ssml],
         check=True,
     )
     voice = read_wav(wav)
@@ -124,6 +119,22 @@ def synth_voice(tmp: Path) -> np.ndarray:
     return voice / peak * 0.95
 
 
+def tipsy(voice: np.ndarray, seed: int) -> np.ndarray:
+    """A bit drunk: slower, a small pitch wander, one stumble, light tremolo."""
+    stretch = 1.16
+    n = max(8, int(len(voice) * stretch))
+    t = np.linspace(0, 1, n)
+    wobble = 0.028 * np.sin(2 * math.pi * 1.6 * t + seed)
+    wobble += 0.012 * np.sin(2 * math.pi * 4.1 * t)
+    stumble = 0.06 * np.exp(-((t - 0.46) / 0.07) ** 2)
+    pos = np.clip((t + wobble - stumble) * (len(voice) - 1), 0, len(voice) - 1)
+    y = np.interp(pos, np.arange(len(voice)), voice)
+    y *= 0.8 + 0.2 * np.sin(2 * math.pi * 2.8 * t)
+    y = 0.74 * y + 0.26 * lowpass(y, 0.3)
+    peak = np.max(np.abs(y)) or 1
+    return y / peak * 0.95
+
+
 def place(mix: np.ndarray, clip: np.ndarray, at: float, gain: float = 1.0) -> None:
     start = int(round(at * SR))
     end = start + len(clip)
@@ -132,9 +143,8 @@ def place(mix: np.ndarray, clip: np.ndarray, at: float, gain: float = 1.0) -> No
     mix[start:end] += clip * gain
 
 
-def build() -> tuple[np.ndarray, float]:
-    voice = synth_voice(Path("/tmp"))
-    # Long blast, short blast, three-note fanfare, then the phrase.
+def build(voice: np.ndarray) -> tuple[np.ndarray, float]:
+    # Long blast, short blast, rising fanfare, then the phrase.
     cursor = 0.0
     events: list[tuple[float, np.ndarray, float]] = []
 
@@ -200,15 +210,58 @@ def write_mp3(samples: np.ndarray, path: Path) -> None:
     wav_path.unlink()
 
 
+# a# is the article "a". The letter name would be eI, which is the wrong word.
+MALE = (
+    "<speak>"
+    '<prosody pitch="-2st" rate="86%">I\'m</prosody> '
+    '<prosody pitch="+3st" rate="88%">on</prosody> '
+    '<prosody pitch="+6st" rate="92%">a</prosody> '
+    '<prosody pitch="+9st" rate="70%">boat</prosody>'
+    "</speak>"
+)
+WOMAN = (
+    "<speak>"
+    '<prosody pitch="+4st" rate="90%">I\'m</prosody> '
+    '<prosody pitch="+7st" rate="92%">on</prosody> '
+    '<prosody pitch="+9st" rate="94%">a</prosody> '
+    '<prosody pitch="+11st" rate="74%">boat</prosody>'
+    "</speak>"
+)
+# Inverted word order plus a slow, high, croaky voice. Original, not an impression track.
+YODA = '<speak><prosody pitch="+8st" rate="62%">On a boat, I am</prosody></speak>'
+# Names use espeak phonemes so "Sjoerd" is not read as an English word.
+VOICES = (
+    ("boottoeter.mp3", "en-us", MALE, ("a#", "aIm", "b'oUt"), 1),
+    ("boot-vrouw.mp3", "en-us+Annie", WOMAN, ("a#", "aIm", "b'oUt"), 2),
+    ("boot-yoda.mp3", "en-us+m3", YODA, ("a#", "b'oUt", "aI"), 3),
+    ("boot-antoine.mp3", "en-us", '<speak><prosody pitch="-1st" rate="86%">[[ant\'wA:n]] is on a boat</prosody></speak>', ("antw'A:n", "a#", "b'oUt"), 4),
+    ("boot-sjoerd.mp3", "en-us", '<speak><prosody pitch="-1st" rate="86%">[[S\'urt]] is on a boat</prosody></speak>', ("S'urt", "a#", "b'oUt"), 5),
+    ("boot-mark.mp3", "en-us", '<speak><prosody pitch="-2st" rate="86%">Mark is on a boat</prosody></speak>', ("m'A@k", "a#", "b'oUt"), 6),
+    ("boot-brendon.mp3", "en-us", '<speak><prosody pitch="+1st" rate="88%">Brendon is on a boat</prosody></speak>', ("br'End@n", "a#", "b'oUt"), 7),
+)
+
+
 def main() -> None:
     if not shutil.which("espeak-ng") or not shutil.which("ffmpeg"):
         raise SystemExit("espeak-ng and ffmpeg are required")
-    samples, voice_at = build()
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    write_mp3(samples, OUT)
-    seconds = len(samples) / SR
-    print(f"wrote {OUT} ({seconds:.2f}s)")
-    print(f"VOICE_AT={voice_at:.3f}")
+    AUDIO.mkdir(parents=True, exist_ok=True)
+    tmp = Path("/tmp/boottoeter")
+    tmp.mkdir(parents=True, exist_ok=True)
+    voice_at_seen: float | None = None
+    for name, voice_id, ssml, must, seed in VOICES:
+        sober = synth_voice(tmp, voice_id, ssml, must)
+        for clip, path in (
+            (sober, AUDIO / name),
+            (tipsy(sober, seed), AUDIO / name.replace(".mp3", "-zat.mp3")),
+        ):
+            samples, voice_at = build(clip)
+            if voice_at_seen is None:
+                voice_at_seen = voice_at
+            elif abs(voice_at - voice_at_seen) > 0.001:
+                raise SystemExit(f"VOICE_AT drifted for {path.name}: {voice_at} vs {voice_at_seen}")
+            write_mp3(samples, path)
+            print(f"wrote {path.name} ({len(samples) / SR:.2f}s)")
+    print(f"VOICE_AT={voice_at_seen:.3f}")
 
 
 if __name__ == "__main__":
